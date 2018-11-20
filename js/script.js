@@ -8023,7 +8023,7 @@
 	  name: "WidgetBody",
 	  data: function data() {
 	    return {
-	      msg: 'hello'
+	      msg: 'hello123'
 	    };
 	  }
 	};
@@ -8044,11 +8044,11 @@
 	  /* style */
 	  const __vue_inject_styles__ = function (inject) {
 	    if (!inject) return
-	    inject("data-v-4ea2c6eb_0", { source: "\nh1[data-v-4ea2c6eb] {\n  padding: 0 0.25em;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAkBA;EACA,kBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n  <div>\n    <h1>{{ msg }}</h1>\n  </div>\n</template>\n\n<script>\n    export default {\n        name: \"WidgetBody\",\n        data() {\n            return {\n                msg: 'hello'\n            };\n        }\n    };\n</script>\n\n<style scoped>\n  h1 {\n    padding: 0 0.25em;\n  }\n</style>"]}, media: undefined });
+	    inject("data-v-1b69b24d_0", { source: "\nh1[data-v-1b69b24d] {\n  padding: 0 0.25em;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAkBA;EACA,kBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n  <div>\n    <h1>{{ msg }}</h1>\n  </div>\n</template>\n\n<script>\n    export default {\n        name: \"WidgetBody\",\n        data() {\n            return {\n                msg: 'hello123'\n            };\n        }\n    };\n</script>\n\n<style scoped>\n  h1 {\n    padding: 0 0.25em;\n  }\n</style>"]}, media: undefined });
 
 	  };
 	  /* scoped */
-	  const __vue_scope_id__ = "data-v-4ea2c6eb";
+	  const __vue_scope_id__ = "data-v-1b69b24d";
 	  /* module identifier */
 	  const __vue_module_identifier__ = undefined;
 	  /* functional template */
