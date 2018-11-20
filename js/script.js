@@ -20104,6 +20104,8 @@
 	//
 	//
 	//
+	//
+	//
 	var script = {
 	  name: 'WidgetBody',
 	  components: {},
@@ -20153,7 +20155,7 @@
 	          }
 	        },
 	        [
-	          _c("div", { staticClass: "container" }, [
+	          _c("div", { staticClass: "container widget-sms-modal" }, [
 	            _c("div", { staticClass: "notification" }, [
 	              _vm._v("\n                This container is "),
 	              _c("strong", [_vm._v("centered")]),
@@ -20172,11 +20174,11 @@
 	  /* style */
 	  const __vue_inject_styles__ = function (inject) {
 	    if (!inject) return
-	    inject("data-v-f1370152_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"WidgetBody.vue"}, media: undefined });
+	    inject("data-v-0376148a_0", { source: "\n.widget-sms-modal[data-v-0376148a] {\n    max-width: 500px;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAkBA;IACA,iBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary is-medium\"\n                @click=\"isComponentModalActive = true\">\n            Launch component modal\n        </button>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container widget-sms-modal\">\n                <div class=\"notification\">\n                    This container is <strong>centered</strong> on desktop.\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .widget-sms-modal {\n        max-width: 500px;\n    }\n</style>\n\n<script>\n    export default {\n        name: 'WidgetBody',\n        components: {},\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
 	  };
 	  /* scoped */
-	  const __vue_scope_id__ = "data-v-f1370152";
+	  const __vue_scope_id__ = "data-v-0376148a";
 	  /* module identifier */
 	  const __vue_module_identifier__ = undefined;
 	  /* functional template */
