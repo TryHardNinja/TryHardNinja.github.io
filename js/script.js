@@ -20098,9 +20098,7 @@
 	//
 	var script = {
 	  name: 'WidgetBody',
-	  components: {
-	    ModalForm: ModalForm
-	  },
+	  components: {},
 	  data: function data() {
 	    return {
 	      isComponentModalActive: false,
@@ -20136,19 +20134,14 @@
 	        [_vm._v("\n    Launch component modal\n  ")]
 	      ),
 	      _vm._v(" "),
-	      _c(
-	        "b-modal",
-	        {
-	          attrs: { active: _vm.isComponentModalActive, "has-modal-card": "" },
-	          on: {
-	            "update:active": function($event) {
-	              _vm.isComponentModalActive = $event;
-	            }
+	      _c("b-modal", {
+	        attrs: { active: _vm.isComponentModalActive, "has-modal-card": "" },
+	        on: {
+	          "update:active": function($event) {
+	            _vm.isComponentModalActive = $event;
 	          }
-	        },
-	        [_c("modal-form", _vm._b({}, "modal-form", _vm.formProps, false))],
-	        1
-	      )
+	        }
+	      })
 	    ],
 	    1
 	  )
