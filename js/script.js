@@ -20111,7 +20111,6 @@
 	//
 	//
 	//
-	//
 	var script = {
 	  name: 'WidgetBody',
 	  components: {},
@@ -20200,11 +20199,11 @@
 	  /* style */
 	  const __vue_inject_styles__ = function (inject) {
 	    if (!inject) return
-	    inject("data-v-7b7c55c4_0", { source: "\n.widget-sms-modal[data-v-7b7c55c4] {\n    max-width: 500px;\n    margin-left: 65px;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAuBA;IACA,iBAAA;IACA,kBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary is-medium\"\n                @click=\"isComponentModalActive = true\">\n            Launch component modal\n        </button>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container widget-sms-modal\">\n                <div class=\"notification\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Pictures\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .widget-sms-modal {\n        max-width: 500px;\n        margin-left: 65px;\n    }\n</style>\n\n<script>\n    export default {\n        name: 'WidgetBody',\n        components: {},\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+	    inject("data-v-f8ea9bf0_0", { source: "\n.widget-sms-modal[data-v-f8ea9bf0] {\n    max-width: 500px;\n    margin-left: 65px;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAsBA;IACA,iBAAA;IACA,kBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary is-medium\"\n                @click=\"isComponentModalActive = true\">\n            Launch component modal\n        </button>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container widget-sms-modal\">\n                <div class=\"notification\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Pictures\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .widget-sms-modal {\n        max-width: 500px;\n        margin-left: 65px;\n    }\n</style>\n\n<script>\n    export default {\n        name: 'WidgetBody',\n        components: {},\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
 	  };
 	  /* scoped */
-	  const __vue_scope_id__ = "data-v-7b7c55c4";
+	  const __vue_scope_id__ = "data-v-f8ea9bf0";
 	  /* module identifier */
 	  const __vue_module_identifier__ = undefined;
 	  /* functional template */
