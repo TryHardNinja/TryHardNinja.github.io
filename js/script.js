@@ -20096,54 +20096,22 @@
 	//
 	//
 	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+	var ModalForm = {
+	  props: ['email', 'password'],
+	  template: "\n        <form action=\"\">\n            <div class=\"modal-card\" style=\"width: auto\">\n                <header class=\"modal-card-head\">\n                    <p class=\"modal-card-title\">Login</p>\n                </header>\n                <section class=\"modal-card-body\">\n                    <b-field label=\"Email\">\n                        <b-input\n                            type=\"email\"\n                            :value=\"email\"\n                            placeholder=\"Your email\"\n                            required>\n                        </b-input>\n                    </b-field>\n\n                    <b-field label=\"Password\">\n                        <b-input\n                            type=\"password\"\n                            :value=\"password\"\n                            password-reveal\n                            placeholder=\"Your password\"\n                            required>\n                        </b-input>\n                    </b-field>\n\n                    <b-checkbox>Remember me</b-checkbox>\n                </section>\n                <footer class=\"modal-card-foot\">\n                    <button class=\"button\" type=\"button\" @click=\"$parent.close()\">Close</button>\n                    <button class=\"button is-primary\">Login</button>\n                </footer>\n            </div>\n        </form>\n    "
+	};
 	var script = {
-	  name: "WidgetBody",
+	  name: 'WidgetBody',
+	  components: {
+	    ModalForm: ModalForm
+	  },
 	  data: function data() {
 	    return {
-	      msg: 'hello123'
+	      isComponentModalActive: false,
+	      formProps: {
+	        email: 'evan@you.com',
+	        password: 'testing'
+	      }
 	    };
 	  }
 	};
@@ -20160,107 +20128,29 @@
 	    "section",
 	    [
 	      _c(
-	        "b-dropdown",
-	        [
-	          _c(
-	            "button",
-	            {
-	              staticClass: "button is-primary",
-	              attrs: { slot: "trigger" },
-	              slot: "trigger"
-	            },
-	            [
-	              _c("span", [_vm._v("Click me!")]),
-	              _vm._v(" "),
-	              _c("b-icon", { attrs: { icon: "menu-down" } })
-	            ],
-	            1
-	          ),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Another action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Something else")])
-	        ],
-	        1
+	        "button",
+	        {
+	          staticClass: "button is-primary is-medium",
+	          on: {
+	            click: function($event) {
+	              _vm.isComponentModalActive = true;
+	            }
+	          }
+	        },
+	        [_vm._v("\n    Launch component modal\n  ")]
 	      ),
 	      _vm._v(" "),
 	      _c(
-	        "b-dropdown",
-	        { attrs: { hoverable: "" } },
-	        [
-	          _c(
-	            "button",
-	            {
-	              staticClass: "button is-info",
-	              attrs: { slot: "trigger" },
-	              slot: "trigger"
-	            },
-	            [
-	              _c("span", [_vm._v("Hover me!")]),
-	              _vm._v(" "),
-	              _c("b-icon", { attrs: { icon: "menu-down" } })
-	            ],
-	            1
-	          ),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Another action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Something else")])
-	        ],
-	        1
-	      ),
-	      _vm._v(" "),
-	      _c(
-	        "b-dropdown",
-	        { attrs: { disabled: "" } },
-	        [
-	          _c(
-	            "button",
-	            {
-	              staticClass: "button",
-	              attrs: { slot: "trigger" },
-	              slot: "trigger"
-	            },
-	            [
-	              _c("span", [_vm._v("Disabled")]),
-	              _vm._v(" "),
-	              _c("b-icon", { attrs: { icon: "menu-down" } })
-	            ],
-	            1
-	          ),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Another action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Something else")])
-	        ],
-	        1
-	      ),
-	      _vm._v(" "),
-	      _c(
-	        "b-dropdown",
-	        [
-	          _c(
-	            "p",
-	            {
-	              staticClass: "tag is-success",
-	              attrs: { slot: "trigger" },
-	              slot: "trigger"
-	            },
-	            [_vm._v("\n      Custom trigger\n    ")]
-	          ),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Another action")]),
-	          _vm._v(" "),
-	          _c("b-dropdown-item", [_vm._v("Something else")])
-	        ],
+	        "b-modal",
+	        {
+	          attrs: { active: _vm.isComponentModalActive, "has-modal-card": "" },
+	          on: {
+	            "update:active": function($event) {
+	              _vm.isComponentModalActive = $event;
+	            }
+	          }
+	        },
+	        [_c("modal-form", _vm._b({}, "modal-form", _vm.formProps, false))],
 	        1
 	      )
 	    ],
@@ -20271,14 +20161,9 @@
 	__vue_render__._withStripped = true;
 
 	  /* style */
-	  const __vue_inject_styles__ = function (inject) {
-	    if (!inject) return
-	    inject("data-v-36334af4_0", { source: "\n.tag[data-v-36334af4] {\n  cursor: pointer;\n}\nspan[data-v-36334af4] {\n  color: red;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAgDA;EACA,gBAAA;CACA;AACA;EACA,WAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n  <section>\n    <b-dropdown>\n      <button class=\"button is-primary\" slot=\"trigger\">\n        <span>Click me!</span>\n        <b-icon icon=\"menu-down\"></b-icon>\n      </button>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n\n    <b-dropdown hoverable>\n      <button class=\"button is-info\" slot=\"trigger\">\n        <span>Hover me!</span>\n        <b-icon icon=\"menu-down\"></b-icon>\n      </button>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n\n    <b-dropdown disabled>\n      <button class=\"button\" slot=\"trigger\">\n        <span>Disabled</span>\n        <b-icon icon=\"menu-down\"></b-icon>\n      </button>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n\n    <b-dropdown>\n      <p class=\"tag is-success\" slot=\"trigger\">\n        Custom trigger\n      </p>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n  </section>\n</template>\n\n<style scoped>\n  .tag {\n    cursor: pointer;\n  }\n  span {\n    color: red;\n  }\n</style>\n\n<script>\n    export default {\n        name: \"WidgetBody\",\n        data() {\n            return {\n                msg: 'hello123'\n            };\n        }\n    };\n</script>\n\n<style scoped>\n  h1 {\n    padding: 0 0.25em;\n  }\n</style>"]}, media: undefined })
-	,inject("data-v-36334af4_1", { source: "\nh1[data-v-36334af4] {\n  padding: 0 0.25em;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAoEA;EACA,kBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n  <section>\n    <b-dropdown>\n      <button class=\"button is-primary\" slot=\"trigger\">\n        <span>Click me!</span>\n        <b-icon icon=\"menu-down\"></b-icon>\n      </button>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n\n    <b-dropdown hoverable>\n      <button class=\"button is-info\" slot=\"trigger\">\n        <span>Hover me!</span>\n        <b-icon icon=\"menu-down\"></b-icon>\n      </button>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n\n    <b-dropdown disabled>\n      <button class=\"button\" slot=\"trigger\">\n        <span>Disabled</span>\n        <b-icon icon=\"menu-down\"></b-icon>\n      </button>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n\n    <b-dropdown>\n      <p class=\"tag is-success\" slot=\"trigger\">\n        Custom trigger\n      </p>\n\n      <b-dropdown-item>Action</b-dropdown-item>\n      <b-dropdown-item>Another action</b-dropdown-item>\n      <b-dropdown-item>Something else</b-dropdown-item>\n    </b-dropdown>\n  </section>\n</template>\n\n<style scoped>\n  .tag {\n    cursor: pointer;\n  }\n  span {\n    color: red;\n  }\n</style>\n\n<script>\n    export default {\n        name: \"WidgetBody\",\n        data() {\n            return {\n                msg: 'hello123'\n            };\n        }\n    };\n</script>\n\n<style scoped>\n  h1 {\n    padding: 0 0.25em;\n  }\n</style>"]}, media: undefined });
-
-	  };
+	  const __vue_inject_styles__ = undefined;
 	  /* scoped */
-	  const __vue_scope_id__ = "data-v-36334af4";
+	  const __vue_scope_id__ = undefined;
 	  /* module identifier */
 	  const __vue_module_identifier__ = undefined;
 	  /* functional template */
@@ -20304,89 +20189,10 @@
 
 	    component._scopeId = scope;
 
-	    {
-	      let hook;
-	      if (style) {
-	        hook = function(context) {
-	          style.call(this, createInjector(context));
-	        };
-	      }
-
-	      if (hook !== undefined) {
-	        if (component.functional) {
-	          // register for functional component in vue file
-	          const originalRender = component.render;
-	          component.render = function renderWithStyleInjection(h, context) {
-	            hook.call(context);
-	            return originalRender(h, context)
-	          };
-	        } else {
-	          // inject component registration as beforeCreate hook
-	          const existing = component.beforeCreate;
-	          component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
-	        }
-	      }
-	    }
-
 	    return component
 	  }
 	  /* style inject */
-	  function __vue_create_injector__() {
-	    const head = document.head || document.getElementsByTagName('head')[0];
-	    const styles = __vue_create_injector__.styles || (__vue_create_injector__.styles = {});
-	    const isOldIE =
-	      typeof navigator !== 'undefined' &&
-	      /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
-
-	    return function addStyle(id, css) {
-	      if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
-
-	      const group = isOldIE ? css.media || 'default' : id;
-	      const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
-
-	      if (!style.ids.includes(id)) {
-	        let code = css.source;
-	        let index = style.ids.length;
-
-	        style.ids.push(id);
-
-	        if (isOldIE) {
-	          style.element = style.element || document.querySelector('style[data-group=' + group + ']');
-	        }
-
-	        if (!style.element) {
-	          const el = style.element = document.createElement('style');
-	          el.type = 'text/css';
-
-	          if (css.media) el.setAttribute('media', css.media);
-	          if (isOldIE) {
-	            el.setAttribute('data-group', group);
-	            el.setAttribute('data-next-index', '0');
-	          }
-
-	          head.appendChild(el);
-	        }
-
-	        if (isOldIE) {
-	          index = parseInt(style.element.getAttribute('data-next-index'));
-	          style.element.setAttribute('data-next-index', index + 1);
-	        }
-
-	        if (style.element.styleSheet) {
-	          style.parts.push(code);
-	          style.element.styleSheet.cssText = style.parts
-	            .filter(Boolean)
-	            .join('\n');
-	        } else {
-	          const textNode = document.createTextNode(code);
-	          const nodes = style.element.childNodes;
-	          if (nodes[index]) style.element.removeChild(nodes[index]);
-	          if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
-	          else style.element.appendChild(textNode);
-	        }
-	      }
-	    }
-	  }
+	  
 	  /* style inject SSR */
 	  
 
@@ -20398,7 +20204,7 @@
 	    __vue_scope_id__,
 	    __vue_is_functional_template__,
 	    __vue_module_identifier__,
-	    __vue_create_injector__,
+	    undefined,
 	    undefined
 	  );
 
