@@ -20098,7 +20098,9 @@
 	//
 	var script = {
 	  name: 'WidgetBody',
-	  components: {},
+	  components: {
+	    ModalForm: ModalForm
+	  },
 	  data: function data() {
 	    return {
 	      isComponentModalActive: false,
