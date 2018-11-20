@@ -20100,6 +20100,10 @@
 	//
 	//
 	//
+	//
+	//
+	//
+	//
 	var script = {
 	  name: 'WidgetBody',
 	  components: {},
@@ -20135,7 +20139,7 @@
 	            }
 	          }
 	        },
-	        [_vm._v("\n    Launch component modal\n  ")]
+	        [_vm._v("\n        Launch component modal\n    ")]
 	      ),
 	      _vm._v(" "),
 	      _c(
@@ -20148,7 +20152,15 @@
 	            }
 	          }
 	        },
-	        [_c("span", [_vm._v("lol")])]
+	        [
+	          _c("div", { staticClass: "container" }, [
+	            _c("div", { staticClass: "notification" }, [
+	              _vm._v("\n                This container is "),
+	              _c("strong", [_vm._v("centered")]),
+	              _vm._v(" on desktop.\n            ")
+	            ])
+	          ])
+	        ]
 	      )
 	    ],
 	    1
@@ -20160,11 +20172,11 @@
 	  /* style */
 	  const __vue_inject_styles__ = function (inject) {
 	    if (!inject) return
-	    inject("data-v-44b85e26_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"WidgetBody.vue"}, media: undefined });
+	    inject("data-v-f1370152_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"WidgetBody.vue"}, media: undefined });
 
 	  };
 	  /* scoped */
-	  const __vue_scope_id__ = "data-v-44b85e26";
+	  const __vue_scope_id__ = "data-v-f1370152";
 	  /* module identifier */
 	  const __vue_module_identifier__ = undefined;
 	  /* functional template */
