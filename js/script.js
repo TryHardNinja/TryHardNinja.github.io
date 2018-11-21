@@ -21512,14 +21512,14 @@
                       _c(
                         "button",
                         {
-                          staticClass: "button is-primary",
+                          staticClass: "button",
                           on: {
                             click: function($event) {
                               _vm.isComponentModalActive = true;
                             }
                           }
                         },
-                        [_vm._v("\n            setting\n        ")]
+                        [_vm._m(0)]
                       )
                     ],
                     1
@@ -21604,17 +21604,26 @@
                 1
               )
             };
-            var __vue_staticRenderFns__ = [];
+            var __vue_staticRenderFns__ = [
+              function() {
+                var _vm = this;
+                var _h = _vm.$createElement;
+                var _c = _vm._self._c || _h;
+                return _c("span", { staticClass: "icon" }, [
+                  _c("i", { staticClass: "fas fa-home" })
+                ])
+              }
+            ];
             __vue_render__._withStripped = true;
 
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-466d2714_0", { source: "\n.smswidget_header[data-v-466d2714] {\n    display: flex;\n    justify-content: space-between;\n}\n.widget-sms-modal[data-v-466d2714] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-466d2714] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAgDA;IACA,cAAA;IACA,+BAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <div class=\"smswidget_header\">\n            <b-dropdown>\n                <button class=\"button is-primary\" slot=\"trigger\">\n                    <span>Выберите шаблон</span>\n                    <b-icon icon=\"menu-down\"></b-icon>\n                </button>\n                <b-dropdown-item>Action</b-dropdown-item>\n                <b-dropdown-item>Another action</b-dropdown-item>\n                <b-dropdown-item>Something else</b-dropdown-item>\n            </b-dropdown>\n            <button class=\"button is-primary\"\n                    @click=\"isComponentModalActive = true\">\n                setting\n            </button>\n        </div>\n\n        <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n        <b-dropdown>\n            <button class=\"button is-primary\" slot=\"trigger\">\n                <span>Отправитель</span>\n                <b-icon icon=\"menu-down\"></b-icon>\n            </button>\n            <b-dropdown-item>Action</b-dropdown-item>\n            <b-dropdown-item>Another action</b-dropdown-item>\n            <b-dropdown-item>Something else</b-dropdown-item>\n        </b-dropdown>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container is-fluid widget-sms-modal\">\n                <div class=\"widget-sms-modal__body\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>-->\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide\n        },\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-076d9d03_0", { source: "\n.smswidget_header[data-v-076d9d03] {\n    display: flex;\n    justify-content: space-between;\n}\n.widget-sms-modal[data-v-076d9d03] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-076d9d03] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAkDA;IACA,cAAA;IACA,+BAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <div class=\"smswidget_header\">\n            <b-dropdown>\n                <button class=\"button is-primary\" slot=\"trigger\">\n                    <span>Выберите шаблон</span>\n                    <b-icon icon=\"menu-down\"></b-icon>\n                </button>\n                <b-dropdown-item>Action</b-dropdown-item>\n                <b-dropdown-item>Another action</b-dropdown-item>\n                <b-dropdown-item>Something else</b-dropdown-item>\n            </b-dropdown>\n            <button class=\"button\"\n                    @click=\"isComponentModalActive = true\">\n                <span class=\"icon\">\n                    <i class=\"fas fa-home\"></i>\n                </span>\n            </button>\n        </div>\n\n        <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n        <b-dropdown>\n            <button class=\"button is-primary\" slot=\"trigger\">\n                <span>Отправитель</span>\n                <b-icon icon=\"menu-down\"></b-icon>\n            </button>\n            <b-dropdown-item>Action</b-dropdown-item>\n            <b-dropdown-item>Another action</b-dropdown-item>\n            <b-dropdown-item>Something else</b-dropdown-item>\n        </b-dropdown>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container is-fluid widget-sms-modal\">\n                <div class=\"widget-sms-modal__body\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>-->\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide\n        },\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-466d2714";
+              const __vue_scope_id__ = "data-v-076d9d03";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
