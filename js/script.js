@@ -21503,21 +21503,25 @@
                         ],
                         1
                       ),
-                      _c("b-tooltip", { attrs: { label: "Настройки" } }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "button is-small",
-                            on: {
-                              click: function($event) {
-                                _vm.isComponentModalActive = true;
+                      _c(
+                        "b-tooltip",
+                        { attrs: { label: "Настройки", position: "is-bottom" } },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "button is-small",
+                              on: {
+                                click: function($event) {
+                                  _vm.isComponentModalActive = true;
+                                }
                               }
-                            }
-                          },
-                          [_c("font-awesome-icon", { attrs: { icon: "cog" } })],
-                          1
-                        )
-                      ])
+                            },
+                            [_c("font-awesome-icon", { attrs: { icon: "cog" } })],
+                            1
+                          )
+                        ]
+                      )
                     ],
                     1
                   ),
@@ -21608,11 +21612,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-6b212f8e_0", { source: "\n.smswidget_header[data-v-6b212f8e] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-6b212f8e] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-6b212f8e] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA2DA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <div class=\"smswidget_header\">\n            <b-dropdown>\n                <button class=\"button is-primary\" slot=\"trigger\">\n                    <span>Выберите шаблон</span>\n\n                    <font-awesome-icon icon=\"chevron-down\"/>\n                </button>\n                <b-dropdown-item>Тест</b-dropdown-item>\n                <b-dropdown-item>Тест</b-dropdown-item>\n                <b-dropdown-item>Тест</b-dropdown-item>\n            </b-dropdown>\n            <b-tooltip label=\"Настройки\">\n                <button class=\"button is-small\"\n                        @click=\"isComponentModalActive = true\">\n                    <font-awesome-icon icon=\"cog\"/>\n\n                </button>\n            </b-tooltip>\n        </div>\n\n        <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n        <b-dropdown>\n            <button class=\"button is-primary\" slot=\"trigger\">\n                <span>Отправитель</span>\n                <font-awesome-icon icon=\"chevron-down\"/>\n            </button>\n            <b-dropdown-item>89225223412</b-dropdown-item>\n            <b-dropdown-item>89136738193</b-dropdown-item>\n            <b-dropdown-item>89541235621</b-dropdown-item>\n        </b-dropdown>\n\n        <b-field label=\"Select a date\">\n            <b-datepicker\n                    placeholder=\"Click to select...\"\n                    icon=\"calendar-today\">\n            </b-datepicker>\n        </b-field>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container is-fluid widget-sms-modal\">\n                <div class=\"widget-sms-modal__body\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>-->\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n    import '@fortawesome/fontawesome-free/css/fontawesome.min.css'\n\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide\n        },\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-0165379e_0", { source: "\n.smswidget_header[data-v-0165379e] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-0165379e] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-0165379e] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA4DA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <div class=\"smswidget_header\">\n            <b-dropdown>\n                <button class=\"button is-primary\" slot=\"trigger\">\n                    <span>Выберите шаблон</span>\n\n                    <font-awesome-icon icon=\"chevron-down\"/>\n                </button>\n                <b-dropdown-item>Тест</b-dropdown-item>\n                <b-dropdown-item>Тест</b-dropdown-item>\n                <b-dropdown-item>Тест</b-dropdown-item>\n            </b-dropdown>\n            <b-tooltip label=\"Настройки\"\n                       position=\"is-bottom\">\n                <button class=\"button is-small\"\n                        @click=\"isComponentModalActive = true\">\n                    <font-awesome-icon icon=\"cog\"/>\n\n                </button>\n            </b-tooltip>\n        </div>\n\n        <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n        <b-dropdown>\n            <button class=\"button is-primary\" slot=\"trigger\">\n                <span>Отправитель</span>\n                <font-awesome-icon icon=\"chevron-down\"/>\n            </button>\n            <b-dropdown-item>89225223412</b-dropdown-item>\n            <b-dropdown-item>89136738193</b-dropdown-item>\n            <b-dropdown-item>89541235621</b-dropdown-item>\n        </b-dropdown>\n\n        <b-field label=\"Select a date\">\n            <b-datepicker\n                    placeholder=\"Click to select...\"\n                    icon=\"calendar-today\">\n            </b-datepicker>\n        </b-field>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container is-fluid widget-sms-modal\">\n                <div class=\"widget-sms-modal__body\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>-->\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n    import '@fortawesome/fontawesome-free/css/fontawesome.min.css'\n\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide\n        },\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-6b212f8e";
+              const __vue_scope_id__ = "data-v-0165379e";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
