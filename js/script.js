@@ -21484,13 +21484,13 @@
                           _c(
                             "button",
                             {
-                              staticClass: "button is-primary",
+                              staticClass: "button is-primary is-light",
                               attrs: { slot: "trigger" },
                               slot: "trigger"
                             },
                             [
                               _c("span", [_vm._v("Выберите шаблон")]),
-                              _c("b-icon", { attrs: { icon: "menu-down" } })
+                              _c("font-awesome-icon", { attrs: { icon: "chevron-down" } })
                             ],
                             1
                           ),
@@ -21526,13 +21526,13 @@
                       _c(
                         "button",
                         {
-                          staticClass: "button is-primary",
+                          staticClass: "button is-primary is-light",
                           attrs: { slot: "trigger" },
                           slot: "trigger"
                         },
                         [
                           _c("span", [_vm._v("Отправитель")]),
-                          _c("b-icon", { attrs: { icon: "menu-down" } })
+                          _c("font-awesome-icon", { attrs: { icon: "chevron-down" } })
                         ],
                         1
                       ),
@@ -21593,11 +21593,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-fba0f064_0", { source: "\n.smswidget_header[data-v-fba0f064] {\n    display: flex;\n    justify-content: space-between;\n}\n.widget-sms-modal[data-v-fba0f064] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-fba0f064] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAiDA;IACA,cAAA;IACA,+BAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <div class=\"smswidget_header\">\n            <b-dropdown>\n                <button class=\"button is-primary\" slot=\"trigger\">\n                    <span>Выберите шаблон</span>\n                    <b-icon icon=\"menu-down\"></b-icon>\n                </button>\n                <b-dropdown-item>Action</b-dropdown-item>\n                <b-dropdown-item>Another action</b-dropdown-item>\n                <b-dropdown-item>Something else</b-dropdown-item>\n            </b-dropdown>\n            <button class=\"button is-small\"\n                    @click=\"isComponentModalActive = true\">\n                <font-awesome-icon icon=\"cog\" />\n\n            </button>\n        </div>\n\n        <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n        <b-dropdown>\n            <button class=\"button is-primary\" slot=\"trigger\">\n                <span>Отправитель</span>\n                <b-icon icon=\"menu-down\"></b-icon>\n            </button>\n            <b-dropdown-item>Action</b-dropdown-item>\n            <b-dropdown-item>Another action</b-dropdown-item>\n            <b-dropdown-item>Something else</b-dropdown-item>\n        </b-dropdown>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container is-fluid widget-sms-modal\">\n                <div class=\"widget-sms-modal__body\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>-->\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide\n        },\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-029e291e_0", { source: "\n.smswidget_header[data-v-029e291e] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-029e291e] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-029e291e] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAiDA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <div class=\"smswidget_header\">\n            <b-dropdown>\n                <button class=\"button is-primary is-light\" slot=\"trigger\">\n                    <span>Выберите шаблон</span>\n                    <font-awesome-icon icon=\"chevron-down\" />\n                </button>\n                <b-dropdown-item>Action</b-dropdown-item>\n                <b-dropdown-item>Another action</b-dropdown-item>\n                <b-dropdown-item>Something else</b-dropdown-item>\n            </b-dropdown>\n            <button class=\"button is-small\"\n                    @click=\"isComponentModalActive = true\">\n                <font-awesome-icon icon=\"cog\" />\n\n            </button>\n        </div>\n\n        <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n        <b-dropdown>\n            <button class=\"button is-primary is-light\" slot=\"trigger\">\n                <span>Отправитель</span>\n                <font-awesome-icon icon=\"chevron-down\" />\n            </button>\n            <b-dropdown-item>Action</b-dropdown-item>\n            <b-dropdown-item>Another action</b-dropdown-item>\n            <b-dropdown-item>Something else</b-dropdown-item>\n        </b-dropdown>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container is-fluid widget-sms-modal\">\n                <div class=\"widget-sms-modal__body\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>-->\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide\n        },\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-fba0f064";
+              const __vue_scope_id__ = "data-v-029e291e";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
@@ -22710,7 +22710,7 @@
              * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
              */
             var faBeer = { prefix: 'fas', iconName: 'beer', icon: [448, 512, [], "f0fc", "M368 96h-48V56c0-13.255-10.745-24-24-24H24C10.745 32 0 42.745 0 56v400c0 13.255 10.745 24 24 24h272c13.255 0 24-10.745 24-24v-42.11l80.606-35.977C429.396 365.063 448 336.388 448 304.86V176c0-44.112-35.888-80-80-80zm16 208.86a16.018 16.018 0 0 1-9.479 14.611L320 343.805V160h48c8.822 0 16 7.178 16 16v128.86zM208 384c-8.836 0-16-7.164-16-16V144c0-8.836 7.164-16 16-16s16 7.164 16 16v224c0 8.836-7.164 16-16 16zm-96 0c-8.836 0-16-7.164-16-16V144c0-8.836 7.164-16 16-16s16 7.164 16 16v224c0 8.836-7.164 16-16 16z"] };
-            var faCocktail = { prefix: 'fas', iconName: 'cocktail', icon: [576, 512, [], "f561", "M296 464h-56V338.78l168.74-168.73c15.52-15.52 4.53-42.05-17.42-42.05H24.68c-21.95 0-32.94 26.53-17.42 42.05L176 338.78V464h-56c-22.09 0-40 17.91-40 40 0 4.42 3.58 8 8 8h240c4.42 0 8-3.58 8-8 0-22.09-17.91-40-40-40zM432 0c-62.61 0-115.35 40.2-135.18 96h52.54c16.65-28.55 47.27-48 82.64-48 52.93 0 96 43.06 96 96s-43.07 96-96 96c-14.04 0-27.29-3.2-39.32-8.64l-35.26 35.26C379.23 279.92 404.59 288 432 288c79.53 0 144-64.47 144-144S511.53 0 432 0z"] };
+            var faChevronDown = { prefix: 'fas', iconName: 'chevron-down', icon: [448, 512, [], "f078", "M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"] };
             var faCog = { prefix: 'fas', iconName: 'cog', icon: [512, 512, [], "f013", "M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"] };
             var faGlassMartini = { prefix: 'fas', iconName: 'glass-martini', icon: [512, 512, [], "f000", "M502.05 57.6C523.3 36.34 508.25 0 478.2 0H33.8C3.75 0-11.3 36.34 9.95 57.6L224 271.64V464h-56c-22.09 0-40 17.91-40 40 0 4.42 3.58 8 8 8h240c4.42 0 8-3.58 8-8 0-22.09-17.91-40-40-40h-56V271.64L502.05 57.6z"] };
 
@@ -23137,7 +23137,7 @@
               }
             };
 
-            library.add(faCog, faCocktail, faGlassMartini, faBeer);
+            library.add(faCog, faChevronDown, faGlassMartini, faBeer);
             Vue.component('font-awesome-icon', FontAwesomeIcon);
             Vue.config.productionTip = false;
             function preRenderWidget(name) {
