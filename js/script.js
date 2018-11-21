@@ -21450,11 +21450,9 @@
             styleInject(css);
 
             //
-
             var script = {
               name: 'WidgetBody',
               components: {
-                /*'tiny-slider': VueTinySlider,*/
                 'vueper-slides': vueperslides_1,
                 'vueper-slide': vueperslides_2
               },
@@ -21464,7 +21462,8 @@
                   formProps: {
                     email: 'evan@you.com',
                     password: 'testing'
-                  }
+                  },
+                  arrows: false
                 };
               }
             };
@@ -21556,11 +21555,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-4da637c0_0", { source: "\n.widget-sms-modal[data-v-4da637c0] {\n    max-width: 500px;\n//margin-left: 65px;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA0BA;IACA,iBAAA;AACA,oBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary is-medium\"\n                @click=\"isComponentModalActive = true\">\n            Launch component modal\n        </button>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container widget-sms-modal\">\n                <div class=\"notification\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <vueper-slides>\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .widget-sms-modal {\n        max-width: 500px;\n    //margin-left: 65px;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n    //import VueTinySlider from 'vue-tiny-slider';\n\n    export default {\n        name: 'WidgetBody',\n        components: {/*'tiny-slider': VueTinySlider,*/\n                    'vueper-slides': VueperSlides,\n                    'vueper-slide': VueperSlide},\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-3122adc8_0", { source: "\n.widget-sms-modal[data-v-3122adc8] {\n    max-width: 500px;\n//margin-left: 65px;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA0BA;IACA,iBAAA;AACA,oBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary is-medium\"\n                @click=\"isComponentModalActive = true\">\n            Launch component modal\n        </button>\n\n        <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n            <div class=\"container widget-sms-modal\">\n                <div class=\"notification\">\n                    <b-tabs type=\"is-toggle\" expanded>\n                        <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                        <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                        <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                    </b-tabs>\n                    <vueper-slides>\n                        <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                    </vueper-slides>\n\n                </div>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .widget-sms-modal {\n        max-width: 500px;\n    //margin-left: 65px;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n\n    export default {\n        name: 'WidgetBody',\n        components: {'vueper-slides': VueperSlides,\n                    'vueper-slide': VueperSlide},\n        data() {\n            return {\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                },\n                arrows: false\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-4da637c0";
+              const __vue_scope_id__ = "data-v-3122adc8";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
