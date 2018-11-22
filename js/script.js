@@ -20117,7 +20117,8 @@
                 QItemMain: QItemMain,
                 QItemTile: QItemTile,
                 QItemSide: QItemSide,
-                QItemSeparator: QItemSeparator
+                QItemSeparator: QItemSeparator,
+                QListHeader: QListHeader
               }
             };
 
@@ -20136,82 +20137,23 @@
                   _c(
                     "q-list",
                     { attrs: { link: "" } },
-                    [
-                      _vm._l(2, function(n) {
-                        return _c(
-                          "q-item",
-                          {
-                            directives: [
-                              { name: "close-overlay", rawName: "v-close-overlay" }
-                            ],
-                            key: "1." + n,
-                            nativeOn: {
-                              click: function($event) {
-                                return _vm.showNotification($event)
-                              }
-                            }
-                          },
-                          [
-                            _c("q-item-side", {
-                              attrs: { icon: "folder", inverted: "", color: "primary" }
-                            }),
-                            _c(
-                              "q-item-main",
-                              [
-                                _c("q-item-tile", { attrs: { label: "" } }, [
-                                  _vm._v("Photos")
-                                ]),
-                                _c("q-item-tile", { attrs: { sublabel: "" } }, [
-                                  _vm._v("February 22, 2016")
-                                ])
-                              ],
-                              1
-                            ),
-                            _c("q-item-side", {
-                              attrs: { right: "", icon: "info", color: "amber" }
-                            })
-                          ],
-                          1
-                        )
-                      }),
-                      _c("q-item-separator", { attrs: { inset: "" } }),
-                      _c("q-list-header", { attrs: { inset: "" } }, [_vm._v("Files")]),
-                      _c(
+                    _vm._l(2, function(n) {
+                      return _c(
                         "q-item",
                         {
                           directives: [
                             { name: "close-overlay", rawName: "v-close-overlay" }
                           ],
+                          key: "1." + n,
                           nativeOn: {
                             click: function($event) {
                               return _vm.showNotification($event)
                             }
                           }
                         },
-                        [
-                          _c("q-item-side", {
-                            attrs: { icon: "assignment", inverted: "", color: "secondary" }
-                          }),
-                          _c(
-                            "q-item-main",
-                            [
-                              _c("q-item-tile", { attrs: { label: "" } }, [
-                                _vm._v("Vacation")
-                              ]),
-                              _c("q-item-tile", { attrs: { sublabel: "" } }, [
-                                _vm._v("February 22, 2016")
-                              ])
-                            ],
-                            1
-                          ),
-                          _c("q-item-side", {
-                            attrs: { right: "", icon: "info", color: "amber" }
-                          })
-                        ],
-                        1
+                        [_vm._v("\n            Шаблон\n        ")]
                       )
-                    ],
-                    2
+                    })
                   )
                 ],
                 1
@@ -20223,11 +20165,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-44d70c92_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
+                inject("data-v-b63b2954_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-44d70c92";
+              const __vue_scope_id__ = "data-v-b63b2954";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
