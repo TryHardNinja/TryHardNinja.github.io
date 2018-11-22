@@ -20110,6 +20110,8 @@
                 /*            'vueper-slides': VueperSlides,
                             'vueper-slide': VueperSlide,
                             'datetime': Datetime,*/
+                QTabs: QTabs,
+                QTab: QTab,
                 QBtn: QBtn,
                 QModal: QModal
               },
@@ -20190,11 +20192,67 @@
                           _c("div", { staticClass: "q-display-1 q-mb-md" }, [
                             _vm._v("Modal with Events")
                           ]),
-                          _vm._l(25, function(n) {
-                            return _c("p", { key: "b-" + n }, [
-                              _vm._v("Scroll down to close")
-                            ])
-                          }),
+                          _c(
+                            "q-tabs",
+                            [
+                              _c("q-tab", {
+                                attrs: {
+                                  slot: "title",
+                                  default: "",
+                                  count: "5",
+                                  name: "tab-1",
+                                  icon: "message"
+                                },
+                                slot: "title"
+                              }),
+                              _c("q-tab", {
+                                attrs: {
+                                  slot: "title",
+                                  disable: "",
+                                  name: "tab-2",
+                                  icon: "fingerprint"
+                                },
+                                slot: "title"
+                              }),
+                              _c("q-tab", {
+                                attrs: {
+                                  slot: "title",
+                                  alert: "",
+                                  name: "tab-3",
+                                  icon: "account_box"
+                                },
+                                slot: "title"
+                              }),
+                              _c("q-tab", {
+                                attrs: {
+                                  slot: "title",
+                                  name: "tab-4",
+                                  icon: "accessibility"
+                                },
+                                slot: "title"
+                              }),
+                              _c("q-tab", {
+                                attrs: { slot: "title", name: "tab-5", icon: "build" },
+                                slot: "title"
+                              }),
+                              _c("q-tab-pane", { attrs: { name: "tab-1" } }, [
+                                _vm._v("Tab One")
+                              ]),
+                              _c("q-tab-pane", { attrs: { name: "tab-2" } }, [
+                                _vm._v("Tab Two")
+                              ]),
+                              _c("q-tab-pane", { attrs: { name: "tab-3" } }, [
+                                _vm._v("Tab Three")
+                              ]),
+                              _c("q-tab-pane", { attrs: { name: "tab-4" } }, [
+                                _vm._v("Tab Four")
+                              ]),
+                              _c("q-tab-pane", { attrs: { name: "tab-5" } }, [
+                                _vm._v("Tab Five")
+                              ])
+                            ],
+                            1
+                          ),
                           _c("q-btn", {
                             attrs: { color: "primary", label: "Close" },
                             on: {
@@ -20204,7 +20262,7 @@
                             }
                           })
                         ],
-                        2
+                        1
                       )
                     ]
                   )
@@ -20218,11 +20276,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-82903bde_0", { source: "\n.smswidget__datetime[data-v-82903bde] {\n    border: 1px solid #4842BB;\n    border-radius: 3px;\n}\n.smswidget_modal-body[data-v-82903bde] {\n    background-color: white;\n    margin-left: 65px;\n    min-width: 500px;\n}\n.button_blue[data-v-82903bde] {\n    background-color: #4842BB;\n    color: white;\n}\n.smswidget_header[data-v-82903bde] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-82903bde] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-82903bde] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA4FA;IACA,0BAAA;IACA,mBAAA;CACA;AAEA;IACA,wBAAA;IACA,kBAAA;IACA,iBAAA;CACA;AAEA;IACA,0BAAA;IACA,aAAA;CACA;AAEA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <q-btn @click=\"eventsModal = true\" label=\"hello\"/>\n        <q-modal\n                v-model=\"eventsModal\"\n                @show=\"notify('Открыт')\"\n                @escape-key=\"notify('escape-key')\"\n                @hide=\"notify('Закрыт')\"\n                :content-css=\"{minWidth: '50vw'}\"\n        >\n            <div style=\"padding: 50px\">\n                <div class=\"q-display-1 q-mb-md\">Modal with Events</div>\n                <p v-for=\"n in 25\" :key=\"`b-${n}`\">Scroll down to close</p>\n                <q-btn color=\"primary\" @click=\"eventsModal = false\" label=\"Close\"/>\n            </div>\n        </q-modal>\n\n        <!--\n                <button class=\"button button_blue\"\n                        @click=\"isWidgetModalActive = true\">\n                    Запустить виджет\n                </button>\n        -->\n        <!--<b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button button_blue\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-right\">\n                            <button class=\"button is-small button_blue\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide>\n                            <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                            <b-dropdown>\n                                <button class=\"button button_blue\" slot=\"trigger\">\n                                    <span>Отправитель</span>\n                                    <font-awesome-icon icon=\"chevron-down\"/>\n                                </button>\n                                <b-dropdown-item>89225223412</b-dropdown-item>\n                                <b-dropdown-item>89136738193</b-dropdown-item>\n                                <b-dropdown-item>89541235621</b-dropdown-item>\n                            </b-dropdown>\n\n                            <b-field label=\"Дата отправки\">\n\n                            </b-field>\n\n                        </vueper-slide>\n\n                        <vueper-slide>\n                            lol\n                        </vueper-slide>\n                    </vueper-slides>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>-->\n    </section>\n</template>\n\n<style scoped>\n    .smswidget__datetime {\n        border: 1px solid #4842BB;\n        border-radius: 3px;\n    }\n\n    .smswidget_modal-body {\n        background-color: white;\n        margin-left: 65px;\n        min-width: 500px;\n    }\n\n    .button_blue {\n        background-color: #4842BB;\n        color: white;\n    }\n\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    /* import {VueperSlides, VueperSlide} from 'vueperslides'\n     import 'vueperslides/dist/vueperslides.min.css'\n     import {Datetime} from 'vue-datetime';\n     import 'vue-datetime/dist/vue-datetime.css'\n     import '@fortawesome/fontawesome-free/css/fontawesome.min.css'*/\n    import {QBtn, QModal} from \"quasar-framework/dist/quasar.mat.esm\";\n\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            /*            'vueper-slides': VueperSlides,\n                        'vueper-slide': VueperSlide,\n                        'datetime': Datetime,*/\n            QBtn,\n            QModal\n        },\n        methods: {\n            notify(eventName) {\n                this.$q.notify(`Виджет \"${eventName}\"`)\n            }\n        },\n        data() {\n            return {\n                eventsModal: false,\n                types: [\n                    {\n                        label: 'Basic with Events',\n                        show: () => {\n                            this.eventsModal = true\n                        }\n                    },\n                ],\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-89d9a4d0_0", { source: "\n.smswidget__datetime[data-v-89d9a4d0] {\n    border: 1px solid #4842BB;\n    border-radius: 3px;\n}\n.smswidget_modal-body[data-v-89d9a4d0] {\n    background-color: white;\n    margin-left: 65px;\n    min-width: 500px;\n}\n.button_blue[data-v-89d9a4d0] {\n    background-color: #4842BB;\n    color: white;\n}\n.smswidget_header[data-v-89d9a4d0] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-89d9a4d0] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-89d9a4d0] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA6GA;IACA,0BAAA;IACA,mBAAA;CACA;AAEA;IACA,wBAAA;IACA,kBAAA;IACA,iBAAA;CACA;AAEA;IACA,0BAAA;IACA,aAAA;CACA;AAEA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <q-btn @click=\"eventsModal = true\" label=\"hello\"/>\n        <q-modal\n                v-model=\"eventsModal\"\n                @show=\"notify('Открыт')\"\n                @escape-key=\"notify('escape-key')\"\n                @hide=\"notify('Закрыт')\"\n                :content-css=\"{minWidth: '50vw'}\"\n        >\n            <div style=\"padding: 50px\">\n                <div class=\"q-display-1 q-mb-md\">Modal with Events</div>\n\n                <q-tabs>\n                    <!-- Tabs - notice slot=\"title\" -->\n                    <q-tab default count=\"5\" slot=\"title\" name=\"tab-1\" icon=\"message\"/>\n                    <q-tab disable slot=\"title\" name=\"tab-2\" icon=\"fingerprint\"/>\n                    <q-tab alert slot=\"title\" name=\"tab-3\" icon=\"account_box\"/>\n                    <q-tab slot=\"title\" name=\"tab-4\" icon=\"accessibility\"/>\n                    <q-tab slot=\"title\" name=\"tab-5\" icon=\"build\"/>\n\n                    <!-- Targets -->\n                    <q-tab-pane name=\"tab-1\">Tab One</q-tab-pane>\n                    <q-tab-pane name=\"tab-2\">Tab Two</q-tab-pane>\n                    <q-tab-pane name=\"tab-3\">Tab Three</q-tab-pane>\n                    <q-tab-pane name=\"tab-4\">Tab Four</q-tab-pane>\n                    <q-tab-pane name=\"tab-5\">Tab Five</q-tab-pane>\n                </q-tabs>\n\n\n                <q-btn color=\"primary\" @click=\"eventsModal = false\" label=\"Close\"/>\n            </div>\n        </q-modal>\n\n        <!--\n                <button class=\"button button_blue\"\n                        @click=\"isWidgetModalActive = true\">\n                    Запустить виджет\n                </button>\n        -->\n        <!--<b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button button_blue\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-right\">\n                            <button class=\"button is-small button_blue\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide>\n                            <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                            <b-dropdown>\n                                <button class=\"button button_blue\" slot=\"trigger\">\n                                    <span>Отправитель</span>\n                                    <font-awesome-icon icon=\"chevron-down\"/>\n                                </button>\n                                <b-dropdown-item>89225223412</b-dropdown-item>\n                                <b-dropdown-item>89136738193</b-dropdown-item>\n                                <b-dropdown-item>89541235621</b-dropdown-item>\n                            </b-dropdown>\n\n                            <b-field label=\"Дата отправки\">\n\n                            </b-field>\n\n                        </vueper-slide>\n\n                        <vueper-slide>\n                            lol\n                        </vueper-slide>\n                    </vueper-slides>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>-->\n    </section>\n</template>\n\n<style scoped>\n    .smswidget__datetime {\n        border: 1px solid #4842BB;\n        border-radius: 3px;\n    }\n\n    .smswidget_modal-body {\n        background-color: white;\n        margin-left: 65px;\n        min-width: 500px;\n    }\n\n    .button_blue {\n        background-color: #4842BB;\n        color: white;\n    }\n\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    /* import {VueperSlides, VueperSlide} from 'vueperslides'\n     import 'vueperslides/dist/vueperslides.min.css'\n     import {Datetime} from 'vue-datetime';\n     import 'vue-datetime/dist/vue-datetime.css'\n     import '@fortawesome/fontawesome-free/css/fontawesome.min.css'*/\n    import {QBtn, QModal, QTabs, QTab} from \"quasar-framework/dist/quasar.mat.esm\";\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            /*            'vueper-slides': VueperSlides,\n                        'vueper-slide': VueperSlide,\n                        'datetime': Datetime,*/\n            QTabs, QTab,\n            QBtn,\n            QModal\n        },\n        methods: {\n            notify(eventName) {\n                this.$q.notify(`Виджет \"${eventName}\"`)\n            }\n        },\n        data() {\n            return {\n                eventsModal: false,\n                types: [\n                    {\n                        label: 'Basic with Events',\n                        show: () => {\n                            this.eventsModal = true\n                        }\n                    },\n                ],\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-82903bde";
+              const __vue_scope_id__ = "data-v-89d9a4d0";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
