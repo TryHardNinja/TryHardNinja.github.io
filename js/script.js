@@ -20105,40 +20105,13 @@
 
             //
             var script = {
-              name: 'WidgetBody',
+              name: "MessageBody",
               components: {
-                /*            'vueper-slides': VueperSlides,
-                            'vueper-slide': VueperSlide,
-                            'datetime': Datetime,*/
-                QTabs: QTabs,
-                QTab: QTab,
-                QBtn: QBtn,
-                QModal: QModal
-              },
-              methods: {
-                notify: function notify$$1(eventName) {
-                  this.$q.notify("\u0412\u0438\u0434\u0436\u0435\u0442 \"".concat(eventName, "\""));
-                }
-              },
-              data: function data() {
-                var _this = this;
-
-                return {
-                  eventsModal: false,
-                  types: [{
-                    label: 'Basic with Events',
-                    show: function show() {
-                      _this.eventsModal = true;
-                    }
-                  }],
-                  time: new Date(),
-                  isWidgetModalActive: false,
-                  isComponentModalActive: false,
-                  formProps: {
-                    email: 'evan@you.com',
-                    password: 'testing'
-                  }
-                };
+                QBtnDropdown: QBtnDropdown,
+                QList: QList,
+                QItem: QItem,
+                QItemMain: QItemMain,
+                QItemTile: QItemTile
               }
             };
 
@@ -20151,103 +20124,26 @@
               var _h = _vm.$createElement;
               var _c = _vm._self._c || _h;
               return _c(
-                "section",
+                "q-btn-dropdown",
+                { attrs: { label: "Button" } },
                 [
-                  _c("q-btn", {
-                    attrs: { label: "hello" },
-                    on: {
-                      click: function($event) {
-                        _vm.eventsModal = true;
-                      }
-                    }
-                  }),
                   _c(
-                    "q-modal",
-                    {
-                      attrs: { "content-css": { minWidth: "50vw" } },
-                      on: {
-                        show: function($event) {
-                          _vm.notify("Открыт");
-                        },
-                        "escape-key": function($event) {
-                          _vm.notify("escape-key");
-                        },
-                        hide: function($event) {
-                          _vm.notify("Закрыт");
-                        }
-                      },
-                      model: {
-                        value: _vm.eventsModal,
-                        callback: function($$v) {
-                          _vm.eventsModal = $$v;
-                        },
-                        expression: "eventsModal"
-                      }
-                    },
+                    "q-list",
+                    { attrs: { link: "" } },
                     [
                       _c(
-                        "div",
-                        { staticStyle: { padding: "50px" } },
+                        "q-item",
                         [
-                          _c("div", { staticClass: "q-display-1 q-mb-md" }, [
-                            _vm._v("Modal with Events")
-                          ]),
-                          _c("p", { staticClass: "caption" }, [
-                            _vm._v("Tab Panes below (shadow, animated, swipeable)")
-                          ]),
                           _c(
-                            "q-tabs",
-                            {
-                              staticClass: "shadow-1",
-                              attrs: {
-                                animated: "",
-                                swipeable: "",
-                                color: "secondary",
-                                glossy: "",
-                                align: "justify"
-                              }
-                            },
-                            [
-                              _c("q-tab", {
-                                attrs: {
-                                  slot: "title",
-                                  default: "",
-                                  name: "mails",
-                                  icon: "mail",
-                                  label: "Mails"
-                                },
-                                slot: "title"
-                              }),
-                              _c("q-tab", {
-                                attrs: {
-                                  slot: "title",
-                                  name: "alarms",
-                                  icon: "alarm",
-                                  label: "Alarms"
-                                },
-                                slot: "title"
-                              }),
-                              _c("q-tab-pane", { attrs: { name: "mails" } }, [
-                                _vm._v("Emails tab")
-                              ]),
-                              _c("q-tab-pane", { attrs: { name: "alarms" } }, [
-                                _vm._v("Alarms tab")
-                              ])
-                            ],
+                            "q-item-main",
+                            [_c("q-item-tile", { attrs: { label: "" } }, [_vm._v("Item")])],
                             1
-                          ),
-                          _c("q-btn", {
-                            attrs: { color: "primary", label: "Close" },
-                            on: {
-                              click: function($event) {
-                                _vm.eventsModal = false;
-                              }
-                            }
-                          })
+                          )
                         ],
                         1
                       )
-                    ]
+                    ],
+                    1
                   )
                 ],
                 1
@@ -20259,11 +20155,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-20c6e10e_0", { source: "\n.smswidget__datetime[data-v-20c6e10e] {\n    border: 1px solid #4842BB;\n    border-radius: 3px;\n}\n.smswidget_modal-body[data-v-20c6e10e] {\n    background-color: white;\n    margin-left: 65px;\n    min-width: 500px;\n}\n.button_blue[data-v-20c6e10e] {\n    background-color: #4842BB;\n    color: white;\n}\n.smswidget_header[data-v-20c6e10e] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-20c6e10e] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-20c6e10e] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAsGA;IACA,0BAAA;IACA,mBAAA;CACA;AAEA;IACA,wBAAA;IACA,kBAAA;IACA,iBAAA;CACA;AAEA;IACA,0BAAA;IACA,aAAA;CACA;AAEA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <q-btn @click=\"eventsModal = true\" label=\"hello\"/>\n        <q-modal\n                v-model=\"eventsModal\"\n                @show=\"notify('Открыт')\"\n                @escape-key=\"notify('escape-key')\"\n                @hide=\"notify('Закрыт')\"\n                :content-css=\"{minWidth: '50vw'}\"\n        >\n            <div style=\"padding: 50px\">\n                <div class=\"q-display-1 q-mb-md\">Modal with Events</div>\n\n                <p class=\"caption\">Tab Panes below (shadow, animated, swipeable)</p>\n                <q-tabs class=\"shadow-1\" animated swipeable color=\"secondary\" glossy align=\"justify\">\n                    <q-tab default name=\"mails\" slot=\"title\" icon=\"mail\" label=\"Mails\"/>\n                    <q-tab name=\"alarms\" slot=\"title\" icon=\"alarm\" label=\"Alarms\"/>\n\n                    <q-tab-pane name=\"mails\">Emails tab</q-tab-pane>\n                    <q-tab-pane name=\"alarms\">Alarms tab</q-tab-pane>\n                </q-tabs>\n\n\n                <q-btn color=\"primary\" @click=\"eventsModal = false\" label=\"Close\"/>\n            </div>\n        </q-modal>\n\n        <!--\n                <button class=\"button button_blue\"\n                        @click=\"isWidgetModalActive = true\">\n                    Запустить виджет\n                </button>\n        -->\n        <!--<b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button button_blue\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-right\">\n                            <button class=\"button is-small button_blue\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide>\n                            <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                            <b-dropdown>\n                                <button class=\"button button_blue\" slot=\"trigger\">\n                                    <span>Отправитель</span>\n                                    <font-awesome-icon icon=\"chevron-down\"/>\n                                </button>\n                                <b-dropdown-item>89225223412</b-dropdown-item>\n                                <b-dropdown-item>89136738193</b-dropdown-item>\n                                <b-dropdown-item>89541235621</b-dropdown-item>\n                            </b-dropdown>\n\n                            <b-field label=\"Дата отправки\">\n\n                            </b-field>\n\n                        </vueper-slide>\n\n                        <vueper-slide>\n                            lol\n                        </vueper-slide>\n                    </vueper-slides>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>-->\n    </section>\n</template>\n\n<style scoped>\n    .smswidget__datetime {\n        border: 1px solid #4842BB;\n        border-radius: 3px;\n    }\n\n    .smswidget_modal-body {\n        background-color: white;\n        margin-left: 65px;\n        min-width: 500px;\n    }\n\n    .button_blue {\n        background-color: #4842BB;\n        color: white;\n    }\n\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    /* import {VueperSlides, VueperSlide} from 'vueperslides'\n     import 'vueperslides/dist/vueperslides.min.css'\n     import {Datetime} from 'vue-datetime';\n     import 'vue-datetime/dist/vue-datetime.css'\n     import '@fortawesome/fontawesome-free/css/fontawesome.min.css'*/\n    import {QBtn, QModal, QTabs, QTab} from \"quasar-framework/dist/quasar.mat.esm\";\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            /*            'vueper-slides': VueperSlides,\n                        'vueper-slide': VueperSlide,\n                        'datetime': Datetime,*/\n            QTabs, QTab,\n            QBtn,\n            QModal\n        },\n        methods: {\n            notify(eventName) {\n                this.$q.notify(`Виджет \"${eventName}\"`)\n            }\n        },\n        data() {\n            return {\n                eventsModal: false,\n                types: [\n                    {\n                        label: 'Basic with Events',\n                        show: () => {\n                            this.eventsModal = true\n                        }\n                    },\n                ],\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-472bb5c2_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-20c6e10e";
+              const __vue_scope_id__ = "data-v-472bb5c2";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
@@ -20277,7 +20173,7 @@
                 const component = (typeof script$$1 === 'function' ? script$$1.options : script$$1) || {};
 
                 // For security concerns, we use only base name in production mode.
-                component.__file = "/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue";
+                component.__file = "/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue";
 
                 if (!component.render) {
                   component.render = template.render;
@@ -20376,7 +20272,7 @@
               
 
               
-              var WidgetBody = __vue_normalize__(
+              var MessageBody = __vue_normalize__(
                 { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
                 __vue_inject_styles__,
                 __vue_script__,
@@ -20384,6 +20280,276 @@
                 __vue_is_functional_template__,
                 __vue_module_identifier__,
                 __vue_create_injector__,
+                undefined
+              );
+
+            //
+            var script$1 = {
+              name: 'WidgetBody',
+              components: {
+                /*            'vueper-slides': VueperSlides,
+                            'vueper-slide': VueperSlide,
+                            'datetime': Datetime,*/
+                QTabs: QTabs,
+                QTab: QTab,
+                QBtn: QBtn,
+                QModal: QModal,
+                MessageBody: MessageBody
+              },
+              methods: {
+                notify: function notify$$1(eventName) {
+                  this.$q.notify("\u0412\u0438\u0434\u0436\u0435\u0442 \"".concat(eventName, "\""));
+                }
+              },
+              data: function data() {
+                var _this = this;
+
+                return {
+                  eventsModal: false,
+                  types: [{
+                    label: 'Basic with Events',
+                    show: function show() {
+                      _this.eventsModal = true;
+                    }
+                  }],
+                  time: new Date(),
+                  isWidgetModalActive: false,
+                  isComponentModalActive: false,
+                  formProps: {
+                    email: 'evan@you.com',
+                    password: 'testing'
+                  }
+                };
+              }
+            };
+
+            /* script */
+                        const __vue_script__$1 = script$1;
+                        
+            /* template */
+            var __vue_render__$1 = function() {
+              var _vm = this;
+              var _h = _vm.$createElement;
+              var _c = _vm._self._c || _h;
+              return _c(
+                "section",
+                [
+                  _c("q-btn", {
+                    attrs: { label: "hello" },
+                    on: {
+                      click: function($event) {
+                        _vm.eventsModal = true;
+                      }
+                    }
+                  }),
+                  _c(
+                    "q-modal",
+                    {
+                      attrs: { "content-css": { minWidth: "50vw" } },
+                      on: {
+                        show: function($event) {
+                          _vm.notify("Открыт");
+                        },
+                        "escape-key": function($event) {
+                          _vm.notify("escape-key");
+                        },
+                        hide: function($event) {
+                          _vm.notify("Закрыт");
+                        }
+                      },
+                      model: {
+                        value: _vm.eventsModal,
+                        callback: function($$v) {
+                          _vm.eventsModal = $$v;
+                        },
+                        expression: "eventsModal"
+                      }
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticStyle: { padding: "50px" } },
+                        [
+                          _c("div", { staticClass: "q-display-1 q-mb-md" }, [
+                            _vm._v("Modal with Events")
+                          ]),
+                          _c(
+                            "q-tabs",
+                            [
+                              _c("q-tab", {
+                                attrs: {
+                                  slot: "title",
+                                  default: "",
+                                  count: "5",
+                                  name: "tab-1",
+                                  icon: "Отправка"
+                                },
+                                slot: "title"
+                              }),
+                              _c("q-tab", {
+                                attrs: { slot: "title", name: "tab-2", icon: "Настройки" },
+                                slot: "title"
+                              }),
+                              _c(
+                                "q-tab-pane",
+                                { attrs: { name: "tab-1" } },
+                                [_c("message-body")],
+                                1
+                              ),
+                              _c("q-tab-pane", { attrs: { name: "tab-2" } }, [
+                                _vm._v("Tab Two")
+                              ])
+                            ],
+                            1
+                          ),
+                          _c("q-btn", {
+                            attrs: { color: "primary", label: "Close" },
+                            on: {
+                              click: function($event) {
+                                _vm.eventsModal = false;
+                              }
+                            }
+                          })
+                        ],
+                        1
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            };
+            var __vue_staticRenderFns__$1 = [];
+            __vue_render__$1._withStripped = true;
+
+              /* style */
+              const __vue_inject_styles__$1 = function (inject) {
+                if (!inject) return
+                inject("data-v-70a55f0e_0", { source: "\n.smswidget__datetime[data-v-70a55f0e] {\n    border: 1px solid #4842BB;\n    border-radius: 3px;\n}\n.smswidget_modal-body[data-v-70a55f0e] {\n    background-color: white;\n    margin-left: 65px;\n    min-width: 500px;\n}\n.button_blue[data-v-70a55f0e] {\n    background-color: #4842BB;\n    color: white;\n}\n.smswidget_header[data-v-70a55f0e] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-70a55f0e] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-70a55f0e] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA2GA;IACA,0BAAA;IACA,mBAAA;CACA;AAEA;IACA,wBAAA;IACA,kBAAA;IACA,iBAAA;CACA;AAEA;IACA,0BAAA;IACA,aAAA;CACA;AAEA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <q-btn @click=\"eventsModal = true\" label=\"hello\"/>\n        <q-modal\n                v-model=\"eventsModal\"\n                @show=\"notify('Открыт')\"\n                @escape-key=\"notify('escape-key')\"\n                @hide=\"notify('Закрыт')\"\n                :content-css=\"{minWidth: '50vw'}\"\n        >\n            <div style=\"padding: 50px\">\n                <div class=\"q-display-1 q-mb-md\">Modal with Events</div>\n\n\n                <q-tabs>\n                    <!-- Tabs - notice slot=\"title\" -->\n                    <q-tab default count=\"5\" slot=\"title\" name=\"tab-1\" icon=\"Отправка\" />\n                    <q-tab slot=\"title\" name=\"tab-2\" icon=\"Настройки\" />\n\n                    <!-- Targets -->\n                    <q-tab-pane name=\"tab-1\">\n                        <message-body></message-body>\n                    </q-tab-pane>\n                    <q-tab-pane name=\"tab-2\">Tab Two</q-tab-pane>\n\n                </q-tabs>\n\n\n                <q-btn color=\"primary\" @click=\"eventsModal = false\" label=\"Close\"/>\n            </div>\n        </q-modal>\n\n        <!--\n                <button class=\"button button_blue\"\n                        @click=\"isWidgetModalActive = true\">\n                    Запустить виджет\n                </button>\n        -->\n        <!--<b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button button_blue\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-right\">\n                            <button class=\"button is-small button_blue\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide>\n                            <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                            <b-dropdown>\n                                <button class=\"button button_blue\" slot=\"trigger\">\n                                    <span>Отправитель</span>\n                                    <font-awesome-icon icon=\"chevron-down\"/>\n                                </button>\n                                <b-dropdown-item>89225223412</b-dropdown-item>\n                                <b-dropdown-item>89136738193</b-dropdown-item>\n                                <b-dropdown-item>89541235621</b-dropdown-item>\n                            </b-dropdown>\n\n                            <b-field label=\"Дата отправки\">\n\n                            </b-field>\n\n                        </vueper-slide>\n\n                        <vueper-slide>\n                            lol\n                        </vueper-slide>\n                    </vueper-slides>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>-->\n    </section>\n</template>\n\n<style scoped>\n    .smswidget__datetime {\n        border: 1px solid #4842BB;\n        border-radius: 3px;\n    }\n\n    .smswidget_modal-body {\n        background-color: white;\n        margin-left: 65px;\n        min-width: 500px;\n    }\n\n    .button_blue {\n        background-color: #4842BB;\n        color: white;\n    }\n\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    /* import {VueperSlides, VueperSlide} from 'vueperslides'\n     import 'vueperslides/dist/vueperslides.min.css'\n     import {Datetime} from 'vue-datetime';\n     import 'vue-datetime/dist/vue-datetime.css'\n     import '@fortawesome/fontawesome-free/css/fontawesome.min.css'*/\n    import {QBtn, QModal, QTabs, QTab} from \"quasar-framework/dist/quasar.mat.esm\";\n    import MessageBody from './MessageBody.vue'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            /*            'vueper-slides': VueperSlides,\n                        'vueper-slide': VueperSlide,\n                        'datetime': Datetime,*/\n            QTabs, QTab,\n            QBtn,\n            QModal,\n            MessageBody\n        },\n        methods: {\n            notify(eventName) {\n                this.$q.notify(`Виджет \"${eventName}\"`)\n            }\n        },\n        data() {\n            return {\n                eventsModal: false,\n                types: [\n                    {\n                        label: 'Basic with Events',\n                        show: () => {\n                            this.eventsModal = true\n                        }\n                    },\n                ],\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+
+              };
+              /* scoped */
+              const __vue_scope_id__$1 = "data-v-70a55f0e";
+              /* module identifier */
+              const __vue_module_identifier__$1 = undefined;
+              /* functional template */
+              const __vue_is_functional_template__$1 = false;
+              /* component normalizer */
+              function __vue_normalize__$1(
+                template, style, script,
+                scope, functional, moduleIdentifier,
+                createInjector, createInjectorSSR
+              ) {
+                const component = (typeof script === 'function' ? script.options : script) || {};
+
+                // For security concerns, we use only base name in production mode.
+                component.__file = "/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue";
+
+                if (!component.render) {
+                  component.render = template.render;
+                  component.staticRenderFns = template.staticRenderFns;
+                  component._compiled = true;
+
+                  if (functional) component.functional = true;
+                }
+
+                component._scopeId = scope;
+
+                {
+                  let hook;
+                  if (style) {
+                    hook = function(context) {
+                      style.call(this, createInjector(context));
+                    };
+                  }
+
+                  if (hook !== undefined) {
+                    if (component.functional) {
+                      // register for functional component in vue file
+                      const originalRender = component.render;
+                      component.render = function renderWithStyleInjection(h, context) {
+                        hook.call(context);
+                        return originalRender(h, context)
+                      };
+                    } else {
+                      // inject component registration as beforeCreate hook
+                      const existing = component.beforeCreate;
+                      component.beforeCreate = existing ? [].concat(existing, hook) : [hook];
+                    }
+                  }
+                }
+
+                return component
+              }
+              /* style inject */
+              function __vue_create_injector__$1() {
+                const head = document.head || document.getElementsByTagName('head')[0];
+                const styles = __vue_create_injector__$1.styles || (__vue_create_injector__$1.styles = {});
+                const isOldIE =
+                  typeof navigator !== 'undefined' &&
+                  /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
+
+                return function addStyle(id, css) {
+                  if (document.querySelector('style[data-vue-ssr-id~="' + id + '"]')) return // SSR styles are present.
+
+                  const group = isOldIE ? css.media || 'default' : id;
+                  const style = styles[group] || (styles[group] = { ids: [], parts: [], element: undefined });
+
+                  if (!style.ids.includes(id)) {
+                    let code = css.source;
+                    let index = style.ids.length;
+
+                    style.ids.push(id);
+
+                    if (isOldIE) {
+                      style.element = style.element || document.querySelector('style[data-group=' + group + ']');
+                    }
+
+                    if (!style.element) {
+                      const el = style.element = document.createElement('style');
+                      el.type = 'text/css';
+
+                      if (css.media) el.setAttribute('media', css.media);
+                      if (isOldIE) {
+                        el.setAttribute('data-group', group);
+                        el.setAttribute('data-next-index', '0');
+                      }
+
+                      head.appendChild(el);
+                    }
+
+                    if (isOldIE) {
+                      index = parseInt(style.element.getAttribute('data-next-index'));
+                      style.element.setAttribute('data-next-index', index + 1);
+                    }
+
+                    if (style.element.styleSheet) {
+                      style.parts.push(code);
+                      style.element.styleSheet.cssText = style.parts
+                        .filter(Boolean)
+                        .join('\n');
+                    } else {
+                      const textNode = document.createTextNode(code);
+                      const nodes = style.element.childNodes;
+                      if (nodes[index]) style.element.removeChild(nodes[index]);
+                      if (nodes.length) style.element.insertBefore(textNode, nodes[index]);
+                      else style.element.appendChild(textNode);
+                    }
+                  }
+                }
+              }
+              /* style inject SSR */
+              
+
+              
+              var WidgetBody = __vue_normalize__$1(
+                { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
+                __vue_inject_styles__$1,
+                __vue_script__$1,
+                __vue_scope_id__$1,
+                __vue_is_functional_template__$1,
+                __vue_module_identifier__$1,
+                __vue_create_injector__$1,
                 undefined
               );
 
