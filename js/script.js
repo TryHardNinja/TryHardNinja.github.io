@@ -22115,8 +22115,7 @@
             function renderWidget(target) {
               //console.log(123);
               //Vue.use(Buefy);
-              Vue.use(index_esm);
-              index_esm.icons.set(iconSet); // after injection in vue
+              Vue.use(index_esm); //Quasar.icons.set(iconSet); // after injection in vue
 
               new Vue({
                 el: target,
