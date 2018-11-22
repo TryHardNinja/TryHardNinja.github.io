@@ -23253,6 +23253,8 @@
               this.callbacks = {
                 render: function render() {
                   preRenderWidget.call(_this, 'smsru-widget').then(function (target) {
+                    var a = document.querySelector('[data-code="smsruwidget"]');
+                    console.log(a, 123);
                     renderWidget(target);
                   });
                   return true;
