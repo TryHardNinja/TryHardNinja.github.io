@@ -20152,7 +20152,9 @@
                 QItemSide: QItemSide,
                 QItemSeparator: QItemSeparator,
                 QListHeader: QListHeader,
-                QInput: QInput
+                QInput: QInput,
+                QChipsInput: QChipsInput,
+                QAutocomplete: QAutocomplete
               }
             };
 
@@ -20254,11 +20256,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-a977debc_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
+                inject("data-v-4cba13ec_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-a977debc";
+              const __vue_scope_id__ = "data-v-4cba13ec";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
