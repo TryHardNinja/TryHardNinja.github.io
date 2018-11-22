@@ -28822,7 +28822,7 @@
             exports.IANAZone = IANAZone;
             exports.LocalZone = LocalZone;
             exports.Settings = Settings;
-
+            //# sourceMappingURL=luxon.js.map
             });
 
             unwrapExports(luxon);
@@ -28861,6 +28861,7 @@
                 }
                 return 1;
             }
+            //# sourceMappingURL=api.js.map
 
             var langRegionMap = {
                 en: 'US',
@@ -28942,6 +28943,7 @@
                 rkt: 'BD',
                 dv: 'MV'
             };
+            //# sourceMappingURL=langRegionMap.js.map
 
             var regionDayMap = {
                 AG: 0,
@@ -29176,6 +29178,7 @@
                 MDV: 5,
                 462: 5
             };
+            //# sourceMappingURL=regionDayMap.js.map
 
             function getWeekStartByRegion$1(regionCode) {
                 return getWeekStartByRegion(regionCode, regionDayMap);
@@ -29184,6 +29187,7 @@
             function getWeekStartByLocale$1(locale) {
                 return getWeekStartByLocale(locale, langRegionMap, regionDayMap);
             }
+            //# sourceMappingURL=main.js.map
 
             var main = /*#__PURE__*/Object.freeze({
                         getWeekStartByRegion: getWeekStartByRegion$1,
@@ -30158,38 +30162,34 @@
                               ],
                               1
                             ),
-                            _c(
-                              "datetime",
-                              {
-                                attrs: { "input-id": "startDate" },
-                                model: {
-                                  value: _vm.date,
-                                  callback: function($$v) {
-                                    _vm.date = $$v;
-                                  },
-                                  expression: "date"
-                                }
+                            _c("datetime", {
+                              attrs: {
+                                type: "datetime",
+                                "input-class": "my-class",
+                                "value-zone": "America/New_York",
+                                zone: "Asia/Shanghai",
+                                format: {
+                                  year: "numeric",
+                                  month: "long",
+                                  day: "numeric",
+                                  hour: "numeric",
+                                  minute: "2-digit",
+                                  timeZoneName: "short"
+                                },
+                                phrases: { ok: "Continue", cancel: "Exit" },
+                                "min-datetime": _vm.minDatetime,
+                                "max-datetime": _vm.maxDatetime,
+                                "week-start": 7,
+                                auto: ""
                               },
-                              [
-                                _c(
-                                  "label",
-                                  {
-                                    attrs: { slot: "before", for: "startDate" },
-                                    slot: "before"
-                                  },
-                                  [_vm._v("Field Label")]
-                                ),
-                                _c(
-                                  "span",
-                                  {
-                                    staticClass: "description",
-                                    attrs: { slot: "after" },
-                                    slot: "after"
-                                  },
-                                  [_vm._v("The field description")]
-                                )
-                              ]
-                            ),
+                              model: {
+                                value: _vm.datetimeEmpty,
+                                callback: function($$v) {
+                                  _vm.datetimeEmpty = $$v;
+                                },
+                                expression: "datetimeEmpty"
+                              }
+                            }),
                             _c(
                               "b-modal",
                               {
@@ -30257,11 +30257,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-de3a809e_0", { source: "\n.smswidget_modal-body[data-v-de3a809e] {\n    background-color: white;\n    margin-left: 65px;\n}\n.smswidget_header[data-v-de3a809e] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-de3a809e] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-de3a809e] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AAqEA;IACA,wBAAA;IACA,kBAAA;CACA;AAEA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary\"\n                @click=\"isWidgetModalActive = true\">\n            Запустить виджет\n        </button>\n\n        <b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button is-primary\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-bottom\">\n                            <button class=\"button is-small\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                    <b-dropdown>\n                        <button class=\"button is-primary\" slot=\"trigger\">\n                            <span>Отправитель</span>\n                            <font-awesome-icon icon=\"chevron-down\"/>\n                        </button>\n                        <b-dropdown-item>89225223412</b-dropdown-item>\n                        <b-dropdown-item>89136738193</b-dropdown-item>\n                        <b-dropdown-item>89541235621</b-dropdown-item>\n                    </b-dropdown>\n\n                    <datetime v-model=\"date\" input-id=\"startDate\">\n                        <label for=\"startDate\" slot=\"before\">Field Label</label>\n                        <span class=\"description\" slot=\"after\">The field description</span>\n                    </datetime>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n                                <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                                    <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                                </vueper-slides>-->\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_modal-body {\n        background-color: white;\n        margin-left: 65px;\n    }\n\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n    import { Datetime } from 'vue-datetime';\n    import 'vue-datetime/dist/vue-datetime.css'\n    import '@fortawesome/fontawesome-free/css/fontawesome.min.css'\n\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide,\n            'datetime': Datetime\n        },\n        data() {\n            return {\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
+                inject("data-v-3e175bf2_0", { source: "\n.smswidget_modal-body[data-v-3e175bf2] {\n    background-color: white;\n    margin-left: 65px;\n}\n.smswidget_header[data-v-3e175bf2] {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n.widget-sms-modal[data-v-3e175bf2] {\n//max-width: 500px; //margin-left: 65px;\n}\n.widget-sms-modal__body[data-v-3e175bf2] {\n    background-color: white;\n}\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA8EA;IACA,wBAAA;IACA,kBAAA;CACA;AAEA;IACA,cAAA;IACA,+BAAA;IACA,oBAAA;CACA;AAEA;AACA,mBAAA,CAAA,oBAAA;CACA;AAEA;IACA,wBAAA;CACA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <section>\n        <button class=\"button is-primary\"\n                @click=\"isWidgetModalActive = true\">\n            Запустить виджет\n        </button>\n\n        <b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button is-primary\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-bottom\">\n                            <button class=\"button is-small\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                    <b-dropdown>\n                        <button class=\"button is-primary\" slot=\"trigger\">\n                            <span>Отправитель</span>\n                            <font-awesome-icon icon=\"chevron-down\"/>\n                        </button>\n                        <b-dropdown-item>89225223412</b-dropdown-item>\n                        <b-dropdown-item>89136738193</b-dropdown-item>\n                        <b-dropdown-item>89541235621</b-dropdown-item>\n                    </b-dropdown>\n\n                    <datetime\n                            type=\"datetime\"\n                            v-model=\"datetimeEmpty\"\n                            input-class=\"my-class\"\n                            value-zone=\"America/New_York\"\n                            zone=\"Asia/Shanghai\"\n                            :format=\"{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit', timeZoneName: 'short' }\"\n                            :phrases=\"{ok: 'Continue', cancel: 'Exit'}\"\n                            :min-datetime=\"minDatetime\"\n                            :max-datetime=\"maxDatetime\"\n                            :week-start=\"7\"\n                            auto\n                    ></datetime>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n                                <!--<vueper-slides :arrows=\"false\" :bullets=\"false\">\n                                    <vueper-slide v-for=\"i in 5\" :key=\"i\" :title=\"i.toString()\"></vueper-slide>\n                                </vueper-slides>-->\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>\n</template>\n\n<style scoped>\n    .smswidget_modal-body {\n        background-color: white;\n        margin-left: 65px;\n    }\n\n    .smswidget_header {\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .widget-sms-modal {\n    //max-width: 500px; //margin-left: 65px;\n    }\n\n    .widget-sms-modal__body {\n        background-color: white;\n    }\n</style>\n\n<script>\n    import {VueperSlides, VueperSlide} from 'vueperslides'\n    import 'vueperslides/dist/vueperslides.min.css'\n    import { Datetime } from 'vue-datetime';\n    import 'vue-datetime/dist/vue-datetime.css'\n    import '@fortawesome/fontawesome-free/css/fontawesome.min.css'\n\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            'vueper-slides': VueperSlides,\n            'vueper-slide': VueperSlide,\n            'datetime': Datetime\n        },\n        data() {\n            return {\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-de3a809e";
+              const __vue_scope_id__ = "data-v-3e175bf2";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
