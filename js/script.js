@@ -20176,10 +20176,8 @@
                   ),
                   _c("q-input", {
                     attrs: {
-                      inverted: "",
-                      color: "purple",
                       rows: "5",
-                      "float-label": "Введите сообщение",
+                      "stack-label": "Введите сообщение",
                       type: "textarea"
                     },
                     model: {
@@ -20243,11 +20241,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-2ba28697_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
+                inject("data-v-1d11f5fc_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-2ba28697";
+              const __vue_scope_id__ = "data-v-1d11f5fc";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
