@@ -20108,7 +20108,7 @@
             var script = {
               data: function data() {
                 return {
-                  area: 'Сообщение',
+                  area: 'Сообщение...',
                   terms: '',
                   terms2: '',
                   terms3: '',
@@ -20176,10 +20176,11 @@
                   ),
                   _c("q-input", {
                     attrs: {
-                      type: "Введите сообщение",
-                      "float-label": "Textarea",
-                      "max-height": 100,
-                      rows: "7"
+                      inverted: "",
+                      color: "purple",
+                      rows: "5",
+                      "float-label": "Введите сообщение",
+                      type: "textarea"
                     },
                     model: {
                       value: _vm.area,
@@ -20242,11 +20243,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-6b140036_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
+                inject("data-v-2ba28697_0", { source: "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", map: {"version":3,"sources":[],"names":[],"mappings":"","file":"MessageBody.vue"}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-6b140036";
+              const __vue_scope_id__ = "data-v-2ba28697";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
