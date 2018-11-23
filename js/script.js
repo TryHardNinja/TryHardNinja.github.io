@@ -20108,6 +20108,7 @@
             var script = {
               data: function data() {
                 return {
+                  time: new Date(),
                   area: 'Сообщение...',
                   terms: '',
                   terms2: '',
@@ -20152,96 +20153,196 @@
               var _vm = this;
               var _h = _vm.$createElement;
               var _c = _vm._self._c || _h;
-              return _c(
-                "div",
-                [
-                  _c(
-                    "q-btn-dropdown",
-                    {
-                      staticClass: "messageBody__selectTemplate",
-                      attrs: { color: "primary", label: "Выберете шаблон" }
-                    },
-                    [
-                      _c(
-                        "q-list",
-                        { attrs: { link: "" } },
-                        [
-                          _c("q-item", [_vm._v("\n                Шаблон\n            ")]),
-                          _c("q-item", [
-                            _vm._v("\n                Шаблон 2\n            ")
-                          ]),
-                          _c("q-item", [_vm._v("\n                Шаблон 3\n            ")])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _c("q-input", {
-                    staticClass: "messageBody__textArea",
-                    attrs: {
-                      rows: "5",
-                      "stack-label": "Введите сообщение",
-                      type: "textarea"
-                    },
-                    model: {
-                      value: _vm.area,
-                      callback: function($$v) {
-                        _vm.area = $$v;
-                      },
-                      expression: "area"
-                    }
-                  }),
-                  _c(
-                    "q-btn-dropdown",
-                    {
-                      staticClass: "messageBody__sender",
-                      attrs: { color: "primary", label: "Отправитель" }
-                    },
-                    [
-                      _c(
-                        "q-list",
-                        { attrs: { link: "" } },
-                        [
-                          _c("q-item", [
-                            _vm._v("\n                89237421212\n            ")
-                          ]),
-                          _c("q-item", [
-                            _vm._v("\n                85217425384\n            ")
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _c(
-                    "q-chips-input",
-                    {
-                      staticClass: "messageBody__selectNumbers",
-                      attrs: {
-                        placeholder: "Выберете номер чтобы добавить",
-                        "stack-label": "Список получателей"
-                      },
-                      on: { duplicate: _vm.duplicate },
-                      model: {
-                        value: _vm.chips1,
-                        callback: function($$v) {
-                          _vm.chips1 = $$v;
-                        },
-                        expression: "chips1"
-                      }
-                    },
-                    [
-                      _c("q-autocomplete", {
-                        on: { search: _vm.search, selected: _vm.selected }
-                      })
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
+              return _c("div", [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "columns is-variable is-1-mobile is-0-tablet is-2-desktop is-2-fullhd"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "column" },
+                      [
+                        _c(
+                          "q-btn-dropdown",
+                          {
+                            staticClass: "messageBody__selectTemplate",
+                            attrs: { color: "primary", label: "Выберете шаблон" }
+                          },
+                          [
+                            _c(
+                              "q-list",
+                              { attrs: { link: "" } },
+                              [
+                                _c("q-item", [
+                                  _vm._v(
+                                    "\n                        Шаблон\n                    "
+                                  )
+                                ]),
+                                _c("q-item", [
+                                  _vm._v(
+                                    "\n                        Шаблон 2\n                    "
+                                  )
+                                ]),
+                                _c("q-item", [
+                                  _vm._v(
+                                    "\n                        Шаблон 3\n                    "
+                                  )
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _c("q-input", {
+                          staticClass: "messageBody__textArea",
+                          attrs: {
+                            rows: "5",
+                            "stack-label": "Введите сообщение",
+                            type: "textarea"
+                          },
+                          model: {
+                            value: _vm.area,
+                            callback: function($$v) {
+                              _vm.area = $$v;
+                            },
+                            expression: "area"
+                          }
+                        }),
+                        _c(
+                          "q-btn-dropdown",
+                          {
+                            staticClass: "messageBody__sender",
+                            attrs: { color: "primary", label: "Отправитель" }
+                          },
+                          [
+                            _c(
+                              "q-list",
+                              { attrs: { link: "" } },
+                              [
+                                _c("q-item", [
+                                  _vm._v(
+                                    "\n                        89237421212\n                    "
+                                  )
+                                ]),
+                                _c("q-item", [
+                                  _vm._v(
+                                    "\n                        85217425384\n                    "
+                                  )
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _c(
+                          "q-chips-input",
+                          {
+                            staticClass: "messageBody__selectNumbers",
+                            attrs: {
+                              placeholder: "Выберете номер чтобы добавить",
+                              "stack-label": "Список получателей"
+                            },
+                            on: { duplicate: _vm.duplicate },
+                            model: {
+                              value: _vm.chips1,
+                              callback: function($$v) {
+                                _vm.chips1 = $$v;
+                              },
+                              expression: "chips1"
+                            }
+                          },
+                          [
+                            _c("q-autocomplete", {
+                              on: { search: _vm.search, selected: _vm.selected }
+                            })
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _c(
+                      "div",
+                      { staticClass: "column" },
+                      [
+                        _c(
+                          "b-field",
+                          { attrs: { label: "Выберете дату отправки" } },
+                          [
+                            _c("b-datepicker", {
+                              attrs: {
+                                placeholder: "Нажмите чтобы выбрать",
+                                icon: "calendar-today"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _c(
+                          "b-field",
+                          { attrs: { label: "Выберете время отправки" } },
+                          [
+                            _c(
+                              "b-timepicker",
+                              {
+                                attrs: { placeholder: "Click to select..." },
+                                model: {
+                                  value: _vm.time,
+                                  callback: function($$v) {
+                                    _vm.time = $$v;
+                                  },
+                                  expression: "time"
+                                }
+                              },
+                              [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "button is-primary",
+                                    on: {
+                                      click: function($event) {
+                                        _vm.time = new Date();
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("b-icon", { attrs: { icon: "clock" } }),
+                                    _c("span", [_vm._v("Now")])
+                                  ],
+                                  1
+                                ),
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "button is-danger",
+                                    on: {
+                                      click: function($event) {
+                                        _vm.time = null;
+                                      }
+                                    }
+                                  },
+                                  [
+                                    _c("b-icon", { attrs: { icon: "close" } }),
+                                    _c("span", [_vm._v("Clear")])
+                                  ],
+                                  1
+                                )
+                              ]
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]
+                )
+              ])
             };
             var __vue_staticRenderFns__ = [];
             __vue_render__._withStripped = true;
@@ -20249,11 +20350,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-20bbb59e_0", { source: "\n.messageBody__sender[data-v-20bbb59e] {\n  margin-top: 10px;\n}\n.messageBody__textArea[data-v-20bbb59e] {\n  margin-top: 10px;\n}\n.messageBody__selectNumbers[data-v-20bbb59e] {\n  margin-top: 10px;\n}\n\n/*# sourceMappingURL=MessageBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue","MessageBody.vue"],"names":[],"mappings":";AAiDA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;;AChDA,2CAA2C","file":"MessageBody.vue","sourcesContent":[null,".messageBody__sender {\n  margin-top: 10px; }\n\n.messageBody__textArea {\n  margin-top: 10px; }\n\n.messageBody__selectNumbers {\n  margin-top: 10px; }\n\n/*# sourceMappingURL=MessageBody.vue.map */"]}, media: undefined });
+                inject("data-v-7f3917f0_0", { source: "\n.messageBody__sender[data-v-7f3917f0] {\n  margin-top: 10px;\n}\n.messageBody__textArea[data-v-7f3917f0] {\n  margin-top: 10px;\n}\n.messageBody__selectNumbers[data-v-7f3917f0] {\n  margin-top: 10px;\n}\n\n/*# sourceMappingURL=MessageBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue","MessageBody.vue"],"names":[],"mappings":";AA8EA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;;AC7EA,2CAA2C","file":"MessageBody.vue","sourcesContent":[null,".messageBody__sender {\n  margin-top: 10px; }\n\n.messageBody__textArea {\n  margin-top: 10px; }\n\n.messageBody__selectNumbers {\n  margin-top: 10px; }\n\n/*# sourceMappingURL=MessageBody.vue.map */"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-20bbb59e";
+              const __vue_scope_id__ = "data-v-7f3917f0";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
@@ -20518,13 +20619,12 @@
                                 },
                                 [
                                   _vm._v(
-                                    "\n                            hello setting\n                        "
+                                    "\n                        hello setting\n                    "
                                   )
                                 ]
                               )
                             ])
-                          ]),
-                          _vm._v("\n\n                <\n            ")
+                          ])
                         ],
                         1
                       )
@@ -20541,12 +20641,12 @@
               /* style */
               const __vue_inject_styles__$1 = function (inject) {
                 if (!inject) return
-                inject("data-v-69881e6a_0", { source: "\n@import \"https://fonts.googleapis.com/icon?family=Material+Icons\";\n@import 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css';\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA4IA,kEAAA;AACA,qFAAA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <div>\n        <q-btn @click=\"layoutModal = true\" label=\"hello\"/>\n\n        <q-modal v-model=\"layoutModal\" :content-css=\"{minWidth: '80vw', minHeight: '80vh', padding: '0px'}\">\n            <q-modal-layout class=\"smswidget-layout\" :content-css=\"{padding: '0px'}\">\n                <q-toolbar slot=\"header\" class=\"smswidget__header\">\n                    <button v-bind:class=\"{ active: settingVisible }\"\n                            v-on:click=\"settingVisible = !settingVisible\" class=\"smswidget__setting-button\">\n                        <font-awesome-icon icon=\"cog\"/>\n                    </button>\n\n                </q-toolbar>\n\n                <section class=\"section\">\n                    <div class=\"smswidget__body container\">\n                        <div class=\"smswidget__messageBody\">\n                            <MessageBody></MessageBody>\n                        </div>\n\n\n                        <div v-show=\"settingVisible\" class=\"smswidget__setting\">\n                            hello setting\n                        </div>\n                    </div>\n                </section>\n\n\n                <!--<q-toolbar class=\"smswidget__footer\" slot=\"footer\">\n\n                </q-toolbar>-->\n\n                <\n            </q-modal-layout>\n        </q-modal>\n\n\n        <!--<q-modal\n                v-model=\"eventsModal\"\n                @show=\"notify('Открыт')\"\n                @escape-key=\"notify('escape-key')\"\n                @hide=\"notify('Закрыт')\"\n                :content-css=\"{minWidth: '50vw'}\"\n        >\n            <div style=\"padding: 50px\">\n                <div class=\"q-display-1 q-mb-md\">Modal with Events</div>\n\n\n                <q-tabs>\n                    &lt;!&ndash; Tabs - notice slot=\"title\" &ndash;&gt;\n                    <q-tab default slot=\"title\" name=\"tab-1\" icon=\"Отправка\" />\n                    <q-tab slot=\"title\" name=\"tab-2\" icon=\"Настройки\" />\n\n                    &lt;!&ndash; Targets &ndash;&gt;\n                    <q-tab-pane name=\"tab-1\">\n                        <message-body></message-body>\n                    </q-tab-pane>\n                    <q-tab-pane name=\"tab-2\">Tab Two</q-tab-pane>\n\n                </q-tabs>\n\n\n                <q-btn color=\"primary\" @click=\"eventsModal = false\" label=\"Close\"/>\n            </div>\n        </q-modal>\n-->\n        <!--\n                <button class=\"button button_blue\"\n                        @click=\"isWidgetModalActive = true\">\n                    Запустить виджет\n                </button>\n        -->\n        <!--<b-modal :active.sync=\"isWidgetModalActive\" has-modal-card>\n            <div class=\"container smswidget_modal-body\">\n                <section class=\"section\">\n                    <div class=\"smswidget_header\">\n                        <b-dropdown>\n                            <button class=\"button button_blue\" slot=\"trigger\">\n                                <span>Выберите шаблон</span>\n\n                                <font-awesome-icon icon=\"chevron-down\"/>\n                            </button>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                            <b-dropdown-item>Тест</b-dropdown-item>\n                        </b-dropdown>\n                        <b-tooltip label=\"Настройки\"\n                                   position=\"is-right\">\n                            <button class=\"button is-small button_blue\"\n                                    @click=\"isComponentModalActive = true\">\n                                <font-awesome-icon icon=\"cog\"/>\n\n                            </button>\n                        </b-tooltip>\n                    </div>\n\n                    <vueper-slides :arrows=\"false\" :bullets=\"false\">\n                        <vueper-slide>\n                            <textarea class=\"textarea\" placeholder=\"Сообщение...\"></textarea>\n                            <b-dropdown>\n                                <button class=\"button button_blue\" slot=\"trigger\">\n                                    <span>Отправитель</span>\n                                    <font-awesome-icon icon=\"chevron-down\"/>\n                                </button>\n                                <b-dropdown-item>89225223412</b-dropdown-item>\n                                <b-dropdown-item>89136738193</b-dropdown-item>\n                                <b-dropdown-item>89541235621</b-dropdown-item>\n                            </b-dropdown>\n\n                            <b-field label=\"Дата отправки\">\n\n                            </b-field>\n\n                        </vueper-slide>\n\n                        <vueper-slide>\n                            lol\n                        </vueper-slide>\n                    </vueper-slides>\n\n                    <b-modal :active.sync=\"isComponentModalActive\" has-modal-card>\n                        <div class=\"container is-fluid widget-sms-modal\">\n                            <div class=\"widget-sms-modal__body\">\n                                <b-tabs type=\"is-toggle\" expanded>\n                                    <b-tab-item label=\"Быстрая отправка\" icon=\"google-photos\"></b-tab-item>\n                                    <b-tab-item label=\"Music\" icon=\"library-music\"></b-tab-item>\n                                    <b-tab-item label=\"Videos\" icon=\"video\"></b-tab-item>\n                                </b-tabs>\n\n\n                            </div>\n                        </div>\n                    </b-modal>\n                </section>\n            </div>\n        </b-modal>\n    </section>-->\n    </div>\n</template>\n<style>\n    @import \"https://fonts.googleapis.com/icon?family=Material+Icons\";\n    @import 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css';\n</style>\n\n<style lang=\"scss\" scoped>\n    .section {\n        padding: 1.3rem 1.5rem;\n    }\n\n    .smswidget-layout {\n        padding: 0;\n        width: 100%;\n        height: 100%;\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n    }\n\n    .smswidget__body {\n        // padding: 10px;\n    }\n\n    .smswidget__setting-button {\n        margin-left: auto;\n        cursor: pointer;\n        background: none;\n        color: white;\n        border: 0;\n        font-size: 22px;\n        transition: transform .8s ease-in-out;\n        &:hover {\n            transform: rotate(360deg);\n        }\n    }\n\n    .smswidget__header {\n        height: 50px;\n        background: url(\"https://sms.ru/i/logo-blue.png?v3\") 3% center no-repeat !important;\n        background-color: #3D539C !important;\n    }\n\n\n</style>\n\n<script>\n    /* import {VueperSlides, VueperSlide} from 'vueperslides'\n     import 'vueperslides/dist/vueperslides.min.css'\n     import {Datetime} from 'vue-datetime';\n     import 'vue-datetime/dist/vue-datetime.css'\n     import '@fortawesome/fontawesome-free/css/fontawesome.min.css'*/\n    import {\n        QBtn,\n        QModal,\n        QTabs,\n        QTab,\n        QTabPane,\n        QModalLayout,\n        QToolbar,\n        QToolbarTitle,\n        QPage,\n        QSearch,\n        QLayoutHeader,\n        QOptionGroup\n    } from \"quasar-framework/dist/quasar.mat.esm\";\n    import MessageBody from './MessageBody.vue'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            QTabs,\n            QTab,\n            QBtn,\n            QModal,\n            QTabPane,\n            QModalLayout,\n            QToolbar,\n            QToolbarTitle,\n            QPage,\n            QSearch,\n            QLayoutHeader,\n            QOptionGroup,\n            MessageBody\n        },\n        methods: {\n            notify(eventName) {\n                this.$q.notify(`Виджет \"${eventName}\"`)\n            }\n        },\n        data() {\n            return {\n                settingVisible: false,\n                tab: 'send',\n                model: 23,\n                eventsModal: false,\n                layoutModal: false,\n                types: [\n                    {\n                        label: 'Basic with Events',\n                        show: () => {\n                            this.eventsModal = true\n                        }\n                    },\n                ],\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined })
-            ,inject("data-v-69881e6a_1", { source: "\n.section[data-v-69881e6a] {\n  padding: 1.3rem 1.5rem;\n}\n.smswidget-layout[data-v-69881e6a] {\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.smswidget__setting-button[data-v-69881e6a] {\n  margin-left: auto;\n  cursor: pointer;\n  background: none;\n  color: white;\n  border: 0;\n  font-size: 22px;\n  transition: transform .8s ease-in-out;\n}\n.smswidget__setting-button[data-v-69881e6a]:hover {\n    transform: rotate(360deg);\n}\n.smswidget__header[data-v-69881e6a] {\n  height: 50px;\n  background: url(\"https://sms.ru/i/logo-blue.png?v3\") 3% center no-repeat !important;\n  background-color: #3D539C !important;\n}\n\n/*# sourceMappingURL=WidgetBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue","WidgetBody.vue"],"names":[],"mappings":";AAiJA;EACA,uBAAA;CACA;AAEA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,cAAA;EACA,uBAAA;EACA,+BAAA;CACA;AAMA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,UAAA;EACA,gBAAA;EACA,sCAAA;CAIA;AAXA;IASA,0BAAA;CACA;AAGA;EACA,aAAA;EACA,oFAAA;EACA,qCAAA;CACA;;ACxJA,0CAA0C","file":"WidgetBody.vue","sourcesContent":[null,".section {\n  padding: 1.3rem 1.5rem; }\n\n.smswidget-layout {\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.smswidget__setting-button {\n  margin-left: auto;\n  cursor: pointer;\n  background: none;\n  color: white;\n  border: 0;\n  font-size: 22px;\n  transition: transform .8s ease-in-out; }\n  .smswidget__setting-button:hover {\n    transform: rotate(360deg); }\n\n.smswidget__header {\n  height: 50px;\n  background: url(\"https://sms.ru/i/logo-blue.png?v3\") 3% center no-repeat !important;\n  background-color: #3D539C !important; }\n\n/*# sourceMappingURL=WidgetBody.vue.map */"]}, media: undefined });
+                inject("data-v-4910691c_0", { source: "\n@import \"https://fonts.googleapis.com/icon?family=Material+Icons\";\n@import 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css';\n", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue"],"names":[],"mappings":";AA+BA,kEAAA;AACA,qFAAA","file":"WidgetBody.vue","sourcesContent":["<template>\n    <div>\n        <q-btn @click=\"layoutModal = true\" label=\"hello\"/>\n\n        <q-modal v-model=\"layoutModal\" :content-css=\"{minWidth: '80vw', minHeight: '80vh', padding: '0px'}\">\n            <q-modal-layout class=\"smswidget-layout\" :content-css=\"{padding: '0px'}\">\n                <q-toolbar slot=\"header\" class=\"smswidget__header\">\n                    <button v-bind:class=\"{ active: settingVisible }\"\n                            v-on:click=\"settingVisible = !settingVisible\" class=\"smswidget__setting-button\">\n                        <font-awesome-icon icon=\"cog\"/>\n                    </button>\n\n                </q-toolbar>\n\n                <section class=\"section\">\n                    <div class=\"smswidget__body container\">\n\n                        <div class=\"smswidget__messageBody\">\n                            <MessageBody></MessageBody>\n                        </div>\n\n                        <div v-show=\"settingVisible\" class=\"smswidget__setting\">\n                            hello setting\n                        </div>\n                    </div>\n                </section>\n            </q-modal-layout>\n        </q-modal>\n    </div>\n</template>\n<style>\n    @import \"https://fonts.googleapis.com/icon?family=Material+Icons\";\n    @import 'https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css';\n</style>\n\n<style lang=\"scss\" scoped>\n    .section {\n        padding: 1.3rem 1.5rem;\n    }\n\n    .smswidget-layout {\n        padding: 0;\n        width: 100%;\n        height: 100%;\n        display: flex;\n        flex-direction: column;\n        justify-content: space-between;\n    }\n\n    .smswidget__body {\n        // padding: 10px;\n    }\n\n    .smswidget__setting-button {\n        margin-left: auto;\n        cursor: pointer;\n        background: none;\n        color: white;\n        border: 0;\n        font-size: 22px;\n        transition: transform .8s ease-in-out;\n        &:hover {\n            transform: rotate(360deg);\n        }\n    }\n\n    .smswidget__header {\n        height: 50px;\n        background: url(\"https://sms.ru/i/logo-blue.png?v3\") 3% center no-repeat !important;\n        background-color: #3D539C !important;\n    }\n\n\n</style>\n\n<script>\n    /* import {VueperSlides, VueperSlide} from 'vueperslides'\n     import 'vueperslides/dist/vueperslides.min.css'\n     import {Datetime} from 'vue-datetime';\n     import 'vue-datetime/dist/vue-datetime.css'\n     import '@fortawesome/fontawesome-free/css/fontawesome.min.css'*/\n    import {\n        QBtn,\n        QModal,\n        QTabs,\n        QTab,\n        QTabPane,\n        QModalLayout,\n        QToolbar,\n        QToolbarTitle,\n        QPage,\n        QSearch,\n        QLayoutHeader,\n        QOptionGroup\n    } from \"quasar-framework/dist/quasar.mat.esm\";\n    import MessageBody from './MessageBody.vue'\n\n    export default {\n        name: 'WidgetBody',\n        components: {\n            QTabs,\n            QTab,\n            QBtn,\n            QModal,\n            QTabPane,\n            QModalLayout,\n            QToolbar,\n            QToolbarTitle,\n            QPage,\n            QSearch,\n            QLayoutHeader,\n            QOptionGroup,\n            MessageBody\n        },\n        methods: {\n            notify(eventName) {\n                this.$q.notify(`Виджет \"${eventName}\"`)\n            }\n        },\n        data() {\n            return {\n                settingVisible: false,\n                tab: 'send',\n                model: 23,\n                eventsModal: false,\n                layoutModal: false,\n                types: [\n                    {\n                        label: 'Basic with Events',\n                        show: () => {\n                            this.eventsModal = true\n                        }\n                    },\n                ],\n                time: new Date(),\n                isWidgetModalActive: false,\n                isComponentModalActive: false,\n                formProps: {\n                    email: 'evan@you.com',\n                    password: 'testing'\n\n                }\n            }\n        }\n    }\n</script>"]}, media: undefined })
+            ,inject("data-v-4910691c_1", { source: "\n.section[data-v-4910691c] {\n  padding: 1.3rem 1.5rem;\n}\n.smswidget-layout[data-v-4910691c] {\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n}\n.smswidget__setting-button[data-v-4910691c] {\n  margin-left: auto;\n  cursor: pointer;\n  background: none;\n  color: white;\n  border: 0;\n  font-size: 22px;\n  transition: transform .8s ease-in-out;\n}\n.smswidget__setting-button[data-v-4910691c]:hover {\n    transform: rotate(360deg);\n}\n.smswidget__header[data-v-4910691c] {\n  height: 50px;\n  background: url(\"https://sms.ru/i/logo-blue.png?v3\") 3% center no-repeat !important;\n  background-color: #3D539C !important;\n}\n\n/*# sourceMappingURL=WidgetBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/WidgetBody.vue","WidgetBody.vue"],"names":[],"mappings":";AAoCA;EACA,uBAAA;CACA;AAEA;EACA,WAAA;EACA,YAAA;EACA,aAAA;EACA,cAAA;EACA,uBAAA;EACA,+BAAA;CACA;AAMA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,aAAA;EACA,UAAA;EACA,gBAAA;EACA,sCAAA;CAIA;AAXA;IASA,0BAAA;CACA;AAGA;EACA,aAAA;EACA,oFAAA;EACA,qCAAA;CACA;;AC3CA,0CAA0C","file":"WidgetBody.vue","sourcesContent":[null,".section {\n  padding: 1.3rem 1.5rem; }\n\n.smswidget-layout {\n  padding: 0;\n  width: 100%;\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between; }\n\n.smswidget__setting-button {\n  margin-left: auto;\n  cursor: pointer;\n  background: none;\n  color: white;\n  border: 0;\n  font-size: 22px;\n  transition: transform .8s ease-in-out; }\n  .smswidget__setting-button:hover {\n    transform: rotate(360deg); }\n\n.smswidget__header {\n  height: 50px;\n  background: url(\"https://sms.ru/i/logo-blue.png?v3\") 3% center no-repeat !important;\n  background-color: #3D539C !important; }\n\n/*# sourceMappingURL=WidgetBody.vue.map */"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__$1 = "data-v-69881e6a";
+              const __vue_scope_id__$1 = "data-v-4910691c";
               /* module identifier */
               const __vue_module_identifier__$1 = undefined;
               /* functional template */
