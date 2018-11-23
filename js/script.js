@@ -20158,7 +20158,7 @@
                   "div",
                   {
                     staticClass:
-                      "columns is-variable is-1-mobile is-0-tablet is-2-desktop is-2-fullhd"
+                      "columns is-variable is-1-mobile is-2-tablet is-2-desktop is-2-fullhd"
                   },
                   [
                     _c(
@@ -20178,17 +20178,17 @@
                               [
                                 _c("q-item", [
                                   _vm._v(
-                                    "\n                        Шаблон\n                    "
+                                    "\n                            Шаблон\n                        "
                                   )
                                 ]),
                                 _c("q-item", [
                                   _vm._v(
-                                    "\n                        Шаблон 2\n                    "
+                                    "\n                            Шаблон 2\n                        "
                                   )
                                 ]),
                                 _c("q-item", [
                                   _vm._v(
-                                    "\n                        Шаблон 3\n                    "
+                                    "\n                            Шаблон 3\n                        "
                                   )
                                 ])
                               ],
@@ -20225,12 +20225,12 @@
                               [
                                 _c("q-item", [
                                   _vm._v(
-                                    "\n                        89237421212\n                    "
+                                    "\n                            89237421212\n                        "
                                   )
                                 ]),
                                 _c("q-item", [
                                   _vm._v(
-                                    "\n                        85217425384\n                    "
+                                    "\n                            85217425384\n                        "
                                   )
                                 ])
                               ],
@@ -20275,10 +20275,7 @@
                           { attrs: { label: "Выберете дату отправки" } },
                           [
                             _c("b-datepicker", {
-                              attrs: {
-                                placeholder: "Нажмите чтобы выбрать",
-                                icon: "calendar-today"
-                              }
+                              attrs: { placeholder: "Нажмите чтобы выбрать" }
                             })
                           ],
                           1
@@ -20310,11 +20307,7 @@
                                       }
                                     }
                                   },
-                                  [
-                                    _c("b-icon", { attrs: { icon: "clock" } }),
-                                    _c("span", [_vm._v("Now")])
-                                  ],
-                                  1
+                                  [_c("span", [_vm._v("Now")])]
                                 ),
                                 _c(
                                   "button",
@@ -20326,11 +20319,7 @@
                                       }
                                     }
                                   },
-                                  [
-                                    _c("b-icon", { attrs: { icon: "close" } }),
-                                    _c("span", [_vm._v("Clear")])
-                                  ],
-                                  1
+                                  [_c("span", [_vm._v("Clear")])]
                                 )
                               ]
                             )
@@ -20350,11 +20339,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-dd50a4e4_0", { source: "\n.messageBody__sender[data-v-dd50a4e4] {\n  margin-top: 10px;\n}\n.messageBody__textArea[data-v-dd50a4e4] {\n  margin-top: 10px;\n}\n.messageBody__selectNumbers[data-v-dd50a4e4] {\n  margin-top: 10px;\n}\n\n/*# sourceMappingURL=MessageBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue","MessageBody.vue"],"names":[],"mappings":";AA8EA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;;AC7EA,2CAA2C","file":"MessageBody.vue","sourcesContent":[null,".messageBody__sender {\n  margin-top: 10px; }\n\n.messageBody__textArea {\n  margin-top: 10px; }\n\n.messageBody__selectNumbers {\n  margin-top: 10px; }\n\n/*# sourceMappingURL=MessageBody.vue.map */"]}, media: undefined });
+                inject("data-v-3e33b8ef_0", { source: "\n.messageBody__sender[data-v-3e33b8ef] {\n  margin-top: 10px;\n}\n.messageBody__textArea[data-v-3e33b8ef] {\n  margin-top: 10px;\n}\n.messageBody__selectNumbers[data-v-3e33b8ef] {\n  margin-top: 10px;\n}\n\n/*# sourceMappingURL=MessageBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue","MessageBody.vue"],"names":[],"mappings":";AAgFA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;AACA;EACA,iBAAA;CACA;;AC/EA,2CAA2C","file":"MessageBody.vue","sourcesContent":[null,".messageBody__sender {\n  margin-top: 10px; }\n\n.messageBody__textArea {\n  margin-top: 10px; }\n\n.messageBody__selectNumbers {\n  margin-top: 10px; }\n\n/*# sourceMappingURL=MessageBody.vue.map */"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-dd50a4e4";
+              const __vue_scope_id__ = "data-v-3e33b8ef";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
