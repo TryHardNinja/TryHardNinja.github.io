@@ -22393,7 +22393,10 @@
             }
             function renderWidget(target) {
               //console.log(123);
-              Vue.use(Buefy);
+              Vue.use(Buefy, {
+                defaultDatepickerMobileNative: false,
+                defaultTimepickerMobileNative: false
+              });
               Vue.use(index_esm);
               index_esm.icons.set(iconSet); // after injection in vue
 
