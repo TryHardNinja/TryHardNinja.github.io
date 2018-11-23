@@ -20156,10 +20156,7 @@
               return _c("div", [
                 _c(
                   "div",
-                  {
-                    staticClass:
-                      "messageBody columns is-variable is-1-mobile is-2-tablet is-2-desktop is-2-fullhd"
-                  },
+                  { staticClass: "messageBody" },
                   [
                     _c(
                       "q-btn-dropdown",
@@ -20248,6 +20245,73 @@
                         })
                       ],
                       1
+                    ),
+                    _c(
+                      "b-field",
+                      { attrs: { label: "Выберете дату отправки" } },
+                      [
+                        _c("b-datepicker", {
+                          attrs: {
+                            placeholder: "Нажмите чтобы выбрать",
+                            icon: "calendar-today"
+                          }
+                        })
+                      ],
+                      1
+                    ),
+                    _c(
+                      "b-field",
+                      { attrs: { label: "Выберете время отправки" } },
+                      [
+                        _c(
+                          "b-timepicker",
+                          {
+                            attrs: { placeholder: "Click to select..." },
+                            model: {
+                              value: _vm.time,
+                              callback: function($$v) {
+                                _vm.time = $$v;
+                              },
+                              expression: "time"
+                            }
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "button is-primary",
+                                on: {
+                                  click: function($event) {
+                                    _vm.time = new Date();
+                                  }
+                                }
+                              },
+                              [
+                                _c("b-icon", { attrs: { icon: "clock" } }),
+                                _c("span", [_vm._v("Now")])
+                              ],
+                              1
+                            ),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "button is-danger",
+                                on: {
+                                  click: function($event) {
+                                    _vm.time = null;
+                                  }
+                                }
+                              },
+                              [
+                                _c("b-icon", { attrs: { icon: "close" } }),
+                                _c("span", [_vm._v("Clear")])
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      ],
+                      1
                     )
                   ],
                   1
@@ -20260,11 +20324,11 @@
               /* style */
               const __vue_inject_styles__ = function (inject) {
                 if (!inject) return
-                inject("data-v-520bacd4_0", { source: "\n.messageBody .icon[data-v-520bacd4] {\n  background-image: none !important;\n}\n.messageBody__sender[data-v-520bacd4] {\n  margin-top: 10px;\n}\n.messageBody__textArea[data-v-520bacd4] {\n  margin-top: 10px;\n}\n.messageBody__selectNumbers[data-v-520bacd4] {\n  margin-top: 10px;\n}\n\n/*# sourceMappingURL=MessageBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue","MessageBody.vue"],"names":[],"mappings":";AAkDA;EAGA,kCAAA;CACA;AAOA;EACA,iBAAA;CACA;AAEA;EACA,iBAAA;CACA;AAEA;EACA,iBAAA;CACA;;AC3DA,2CAA2C","file":"MessageBody.vue","sourcesContent":[null,".messageBody .icon {\n  background-image: none !important; }\n\n.messageBody__sender {\n  margin-top: 10px; }\n\n.messageBody__textArea {\n  margin-top: 10px; }\n\n.messageBody__selectNumbers {\n  margin-top: 10px; }\n\n/*# sourceMappingURL=MessageBody.vue.map */"]}, media: undefined });
+                inject("data-v-e1287f00_0", { source: "\n.messageBody__sender[data-v-e1287f00] {\n  margin-top: 10px;\n}\n.messageBody__textArea[data-v-e1287f00] {\n  margin-top: 10px;\n}\n.messageBody__selectNumbers[data-v-e1287f00] {\n  margin-top: 10px;\n}\n\n/*# sourceMappingURL=MessageBody.vue.map */", map: {"version":3,"sources":["/Users/nikitapilgrim/WebstormProjects/sms.ru_widget/src/js/components/MessageBody.vue","MessageBody.vue"],"names":[],"mappings":";AAiFA;EACA,iBAAA;CACA;AAEA;EACA,iBAAA;CACA;AAEA;EACA,iBAAA;CACA;;AClFA,2CAA2C","file":"MessageBody.vue","sourcesContent":[null,".messageBody__sender {\n  margin-top: 10px; }\n\n.messageBody__textArea {\n  margin-top: 10px; }\n\n.messageBody__selectNumbers {\n  margin-top: 10px; }\n\n/*# sourceMappingURL=MessageBody.vue.map */"]}, media: undefined });
 
               };
               /* scoped */
-              const __vue_scope_id__ = "data-v-520bacd4";
+              const __vue_scope_id__ = "data-v-e1287f00";
               /* module identifier */
               const __vue_module_identifier__ = undefined;
               /* functional template */
